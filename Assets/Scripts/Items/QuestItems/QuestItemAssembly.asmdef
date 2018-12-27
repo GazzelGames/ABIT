@@ -1,0 +1,11 @@
+{
+    "name": "QuestItemAssembly",
+    "references": [
+        "DialogueSystem",
+        "ManagerAssembly"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}

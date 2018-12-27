@@ -1,0 +1,13 @@
+{
+    "name": "CanvasAssembly",
+    "references": [
+        "EquipmentItemAssembly",
+        "ActionItemsAssembly",
+        "QuestItemAssembly",
+        "ManagerAssembly"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}

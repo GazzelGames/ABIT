@@ -1,0 +1,10 @@
+{
+    "name": "EquipmentItemAssembly",
+    "references": [
+        "ManagerAssembly"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4b5a74c02624e4246a66d6b043de18b2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - bushDestroyed: {instanceID: 0}
+  - lootGenerator: {fileID: 1926420777500164, guid: 84e4797a16747ed44bd48456cc1dbda2,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

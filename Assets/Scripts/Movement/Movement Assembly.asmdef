@@ -1,0 +1,12 @@
+{
+    "name": "MovementAssembly",
+    "references": [
+        "ManagerAssembly",
+        "CombatAssembly",
+        "CanvasAssembly"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}

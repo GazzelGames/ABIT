@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b8bca336347d2fe44b12a97eb052ff1d
+timeCreated: 1523554404
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - musicSlider: {instanceID: 0}
+  - SFXSlider: {instanceID: 0}
+  - SFXSample: {fileID: 8300000, guid: b27eb7bc9d88156468dfa6353d333525, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

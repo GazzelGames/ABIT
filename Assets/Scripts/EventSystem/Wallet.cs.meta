@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 5201fb1b45649a948b543fc45eebce66
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - walletCanvas: {instanceID: 0}
+  - wallet: {fileID: 11400000, guid: 4f0f12d18d9a5a947a80d6108138d60c, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

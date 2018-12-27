@@ -1,0 +1,16 @@
+{
+    "name": "EventAssembly",
+    "references": [
+        "CanvasAssembly",
+        "DialogueSystem",
+        "MovementAssembly",
+        "EquipmentItemAssembly",
+        "QuestItemAssembly",
+        "ActionItemsAssembly",
+        "ManagerAssembly"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}

@@ -1,0 +1,12 @@
+{
+    "name": "LootAssembly",
+    "references": [
+        "CanvasAssembly",
+        "CombatAssembly",
+        "ManagerAssembly"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}

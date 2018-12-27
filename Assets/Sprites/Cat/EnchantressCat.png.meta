@@ -1,0 +1,272 @@
+fileFormatVersion: 2
+guid: df57d5d4eaa0a594398c6be08634111d
+timeCreated: 1529515757
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: EnchantressCat_0
+    21300002: EnchantressCat_1
+    21300004: EnchantressCat_2
+    21300006: EnchantressCat_3
+    21300008: EnchantressCat_4
+    21300010: EnchantressCat_5
+    21300012: EnchantressCat_6
+    21300014: EnchantressCat_7
+    21300016: EnchantressCat_8
+    21300018: EnchantressCat_9
+    21300020: EnchantressCat_10
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EnchantressCat_0
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 1008
+        width: 129
+        height: 81
+      alignment: 9
+      pivot: {x: 0.39763835, y: 0.50881165}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EnchantressCat_1
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 984
+        width: 129
+        height: 105
+      alignment: 9
+      pivot: {x: 0.39487168, y: 0.61896044}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EnchantressCat_2
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 963
+        width: 159
+        height: 126
+      alignment: 9
+      pivot: {x: 0.32268098, y: 0.68127346}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EnchantressCat_3
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 699
+        width: 198
+        height: 90
+      alignment: 9
+      pivot: {x: 0.2593582, y: 0.55709296}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EnchantressCat_4
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 669
+        width: 171
+        height: 120
+      alignment: 9
+      pivot: {x: 0.29785103, y: 0.66349435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EnchantressCat_5
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 666
+        width: 129
+        height: 123
+      alignment: 9
+      pivot: {x: 0.39996386, y: 0.6713639}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EnchantressCat_6
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 396
+        width: 129
+        height: 93
+      alignment: 9
+      pivot: {x: 0.3988923, y: 0.5644374}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EnchantressCat_7
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 408
+        width: 129
+        height: 81
+      alignment: 9
+      pivot: {x: 0.397526, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EnchantressCat_8
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 408
+        width: 129
+        height: 81
+      alignment: 9
+      pivot: {x: 0.40025863, y: 0.5021758}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EnchantressCat_9
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 117
+        width: 153
+        height: 126
+      alignment: 9
+      pivot: {x: 0.33333534, y: 0.29762146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: EnchantressCat_10
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 99
+        width: 198
+        height: 96
+      alignment: 9
+      pivot: {x: 0.25717378, y: 0.5770504}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6f1929a2b9178e442a8cf4fd66cb99be
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - text: {instanceID: 0}
+  - speechBox: {fileID: 1827351930876280, guid: 8ac1843c0120407469b52be3fc8b41c0,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

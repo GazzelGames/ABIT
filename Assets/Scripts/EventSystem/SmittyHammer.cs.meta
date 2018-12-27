@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e86e10f7b7b18bb4aa545b6f5fa19046
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - questHammer: {fileID: 11400000, guid: 9bed116915762d74a892b605c5afd62c, type: 2}
+  - ironSword: {fileID: 1017007309251356, guid: 2dd5c4b4f856e9b44a822c61bd19bb68,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

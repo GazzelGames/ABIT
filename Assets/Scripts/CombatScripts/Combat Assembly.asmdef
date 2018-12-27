@@ -1,0 +1,11 @@
+{
+    "name": "CombatAssembly",
+    "references": [
+        "CanvasAssembly",
+        "ManagerAssembly"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}

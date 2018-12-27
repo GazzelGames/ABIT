@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 026b791d214360247b71a0c86930c112
+timeCreated: 1530189762
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - textObj: {fileID: 114028053646128712, guid: 444a800b6d4f8a647b35b80b4fad6904,
+      type: 2}
+  - speechBox: {fileID: 1529153323326670, guid: 444a800b6d4f8a647b35b80b4fad6904,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
