@@ -55,7 +55,7 @@ public class GovenorDialogueHandler : MonoBehaviour {
     IEnumerator GovenorAlertedScene()
     {
 
-        yield return new WaitUntil(() => CameraController.instance.targetReached);
+        yield return new WaitForSeconds(1f);
         DialogueManager.instance.StartTalking(eatingText);
         yield return new WaitUntil(()=>DialogueManager.instance.enabled == false);
 

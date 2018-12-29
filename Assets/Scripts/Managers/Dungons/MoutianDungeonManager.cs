@@ -31,6 +31,9 @@ public class MoutianDungeonManager : MonoBehaviour {
     }
     public GameObject keyImage;
     public Text keyCounterText;
+
+    public bool playerInMoutian = false;
+
     int keyCounter;
     public int KeyCounter
     {
@@ -44,12 +47,14 @@ public class MoutianDungeonManager : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        playerInMoutian = true;
         keyImage.SetActive(true);
         keyCounterText.text = keyCounter.ToString();
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        playerInMoutian = false;
         keyImage.SetActive(false);
     }
 }

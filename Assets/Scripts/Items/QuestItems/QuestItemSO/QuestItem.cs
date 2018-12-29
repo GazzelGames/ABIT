@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using UnityEngine;
-using UnityEditor;
+﻿using UnityEngine;
+
 [System.Serializable]
 public class QuestItem : ScriptableObject{
 
@@ -9,17 +8,3 @@ public class QuestItem : ScriptableObject{
     public GameObject questItem;
     public BasicItemValues itemValues;
 }
-
-/*public class MakeQuestObject
-{
-    [MenuItem("Assets/Create/QuestItemObject")]
-    public static void Create()
-    {
-        QuestItem asset = ScriptableObject.CreateInstance<QuestItem>();
-        AssetDatabase.CreateAsset(asset, "Assets/NewQuestItem.asset");
-        AssetDatabase.SaveAssets();
-        EditorUtility.FocusProjectWindow();
-        Selection.activeObject = asset;
-    }
-
-}*/

@@ -38,12 +38,13 @@ public class CameraController : MonoBehaviour {
 
     public float x;
     public float y;
+    public float PPU;
     private void LateUpdate()
     {
         //I Need to move camera to closest unit
         Vector3 position = transform.position;
-        x = position.x = Mathf.Round(position.x * 32)/32;
-        y = position.y = Mathf.Round(position.y * 32)/32;
+        x = position.x = Mathf.Round(position.x * PPU)/PPU;
+        y = position.y = Mathf.Round(position.y * PPU)/PPU;
         transform.position = new Vector3(position.x,position.y,-5);
 
     }
@@ -67,15 +68,20 @@ public class CameraController : MonoBehaviour {
 	void TargetTransform(){
         Vector3 currentVec = variablePos - transform.position;
         Vector3 vectorOffset = new Vector3(currentVec.x, currentVec.y, 0);
-        if (vectorOffset.magnitude > 0.1f)
+        print(vectorOffset.ToString());
+        print(vectorOffset.magnitude.ToString());
+        if (vectorOffset.magnitude > 0.3f)
         {
-            transform.position += (vectorOffset * Time.deltaTime * cameraSpeed/2);
+            transform.Translate(vectorOffset * Time.deltaTime * cameraSpeed);
         }
         else
         {
+
+            transform.position = variablePos;
             targetReached = true;
         }
-
+        print(vectorOffset.ToString());
+        print(vectorOffset.magnitude.ToString());
     }
 	void InitializeCamera(){
 		transform.position = new Vector3 (Player.transform.position.x, Player.transform.position.y, -10);

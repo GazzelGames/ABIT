@@ -52,7 +52,6 @@ public class BlackSmithDialogue : MonoBehaviour {
         waitingForHammer = hammerRecieved = false;
     }
 
-    NormalDialogue stuff;
     private void GetDialogue()
     {
         SetTalkingStance();

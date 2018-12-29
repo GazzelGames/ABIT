@@ -110,10 +110,10 @@ TextureImporter:
       name: Church Floor 16bit Scale_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 409
-        width: 100
-        height: 100
+        x: 2
+        y: 410
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,7 +121,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c54ce5764827b4d4eaa4ee96329aad32
+      spriteID: 84240d4639bf33f4e88fa0aa38ed2320
       vertices: []
       indices: 
       edges: []
@@ -130,10 +130,10 @@ TextureImporter:
       name: Church Floor 16bit Scale_1
       rect:
         serializedVersion: 2
-        x: 103
-        y: 409
-        width: 100
-        height: 100
+        x: 104
+        y: 410
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,7 +141,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd9f1577d291a0e458e03d58adbf59e4
+      spriteID: a1b1e7b71ce9ad4409260bbf52b71c18
       vertices: []
       indices: 
       edges: []
@@ -150,10 +150,10 @@ TextureImporter:
       name: Church Floor 16bit Scale_2
       rect:
         serializedVersion: 2
-        x: 205
-        y: 409
-        width: 100
-        height: 100
+        x: 206
+        y: 410
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,7 +161,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01c2017c8f5aef74d90c6e8f6ec6f26a
+      spriteID: 92eeb5b7db650e748b6b0b058e28b06a
       vertices: []
       indices: 
       edges: []
@@ -170,10 +170,10 @@ TextureImporter:
       name: Church Floor 16bit Scale_3
       rect:
         serializedVersion: 2
-        x: 307
-        y: 409
-        width: 100
-        height: 100
+        x: 308
+        y: 410
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,7 +181,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b335fd0fdb8c354da951f0413acc316
+      spriteID: 6195b069979960643a65cf97b2429cdf
       vertices: []
       indices: 
       edges: []
@@ -190,10 +190,10 @@ TextureImporter:
       name: Church Floor 16bit Scale_4
       rect:
         serializedVersion: 2
-        x: 409
-        y: 409
-        width: 100
-        height: 100
+        x: 410
+        y: 410
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,7 +201,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4dd0662bdd3d8b4fbedbf16863636dc
+      spriteID: f1784828a76a4a142be265c4f459f02f
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,10 @@ TextureImporter:
       name: Church Floor 16bit Scale_5
       rect:
         serializedVersion: 2
-        x: 1
-        y: 307
-        width: 100
-        height: 100
+        x: 2
+        y: 308
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,7 +221,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be29b6c094b10be44a3a4f6a839104f6
+      spriteID: be3a28d6c5af18d44b314e68e742a132
       vertices: []
       indices: 
       edges: []
@@ -230,10 +230,10 @@ TextureImporter:
       name: Church Floor 16bit Scale_6
       rect:
         serializedVersion: 2
-        x: 103
-        y: 307
-        width: 100
-        height: 100
+        x: 104
+        y: 308
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,7 +241,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a99f7777455e9cb4e90b1387ea7c346e
+      spriteID: 93bae3f77e936c04ca5a51a868552b3f
       vertices: []
       indices: 
       edges: []
@@ -250,10 +250,10 @@ TextureImporter:
       name: Church Floor 16bit Scale_7
       rect:
         serializedVersion: 2
-        x: 205
-        y: 307
-        width: 100
-        height: 100
+        x: 206
+        y: 308
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,7 +261,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0fd46617a90f384c8e10e9eeadece61
+      spriteID: 6cae77ed383c59c42ab076327ec56523
       vertices: []
       indices: 
       edges: []
@@ -270,10 +270,10 @@ TextureImporter:
       name: Church Floor 16bit Scale_8
       rect:
         serializedVersion: 2
-        x: 307
-        y: 307
-        width: 100
-        height: 100
+        x: 308
+        y: 308
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,7 +281,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfa7791967df7e140a01c15eb90aa768
+      spriteID: 584add1511c1c8744a387243d7ed1225
       vertices: []
       indices: 
       edges: []
@@ -290,10 +290,10 @@ TextureImporter:
       name: Church Floor 16bit Scale_9
       rect:
         serializedVersion: 2
-        x: 409
-        y: 307
-        width: 100
-        height: 100
+        x: 410
+        y: 308
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -301,7 +301,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e3b85bf30fd3c04ab50cbac344567df
+      spriteID: 779b46be97168ff43a378a988ba01b40
       vertices: []
       indices: 
       edges: []
@@ -310,10 +310,10 @@ TextureImporter:
       name: Church Floor 16bit Scale_10
       rect:
         serializedVersion: 2
-        x: 1
-        y: 205
-        width: 100
-        height: 100
+        x: 2
+        y: 206
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,7 +321,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15fd5b5104bad6f4fb9fc9c302b88964
+      spriteID: a4b8858962f199d4f996c71ae47b18e5
       vertices: []
       indices: 
       edges: []
@@ -330,10 +330,10 @@ TextureImporter:
       name: Church Floor 16bit Scale_11
       rect:
         serializedVersion: 2
-        x: 103
-        y: 205
-        width: 100
-        height: 100
+        x: 104
+        y: 206
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,7 +341,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6ee3e7af6b541c4992280dd8201ba21
+      spriteID: 1cc87aa2f1fca554fa041e3d5f57da3e
       vertices: []
       indices: 
       edges: []
@@ -350,10 +350,10 @@ TextureImporter:
       name: Church Floor 16bit Scale_12
       rect:
         serializedVersion: 2
-        x: 205
-        y: 205
-        width: 100
-        height: 100
+        x: 206
+        y: 206
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -361,7 +361,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c582ea3b1b67ed49a8f4a1582674526
+      spriteID: fcfe151edbf09694fae6f479b23132bb
       vertices: []
       indices: 
       edges: []
@@ -370,10 +370,10 @@ TextureImporter:
       name: Church Floor 16bit Scale_13
       rect:
         serializedVersion: 2
-        x: 307
-        y: 205
-        width: 100
-        height: 100
+        x: 308
+        y: 206
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,7 +381,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e92035925735c744db5f4f42c646e0f4
+      spriteID: d3a0cdd2400ad0f4689c0a63da07a635
       vertices: []
       indices: 
       edges: []
@@ -390,10 +390,10 @@ TextureImporter:
       name: Church Floor 16bit Scale_14
       rect:
         serializedVersion: 2
-        x: 409
-        y: 205
-        width: 100
-        height: 100
+        x: 410
+        y: 206
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -401,7 +401,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70ca38efc1181cc44ba5b88facfd9568
+      spriteID: d1827fb35d3c9f44f87ee6da97976107
       vertices: []
       indices: 
       edges: []
@@ -410,10 +410,10 @@ TextureImporter:
       name: Church Floor 16bit Scale_15
       rect:
         serializedVersion: 2
-        x: 1
-        y: 103
-        width: 100
-        height: 100
+        x: 2
+        y: 104
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -421,7 +421,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd5dc5cc5c8418c42a7b041dad2e5504
+      spriteID: c00ebf791cd1cd7439074a590a17d387
       vertices: []
       indices: 
       edges: []
@@ -430,10 +430,10 @@ TextureImporter:
       name: Church Floor 16bit Scale_16
       rect:
         serializedVersion: 2
-        x: 103
-        y: 103
-        width: 100
-        height: 100
+        x: 104
+        y: 104
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -441,7 +441,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd5dc746ec46b914a9091dd38df9d30f
+      spriteID: 3ee5d78167270bb48b3f01bcd9ae4ef2
       vertices: []
       indices: 
       edges: []
@@ -450,10 +450,10 @@ TextureImporter:
       name: Church Floor 16bit Scale_17
       rect:
         serializedVersion: 2
-        x: 205
-        y: 103
-        width: 100
-        height: 100
+        x: 206
+        y: 104
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -461,7 +461,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5066eb8a8bf772043996f8bdfc1da3f9
+      spriteID: 0f4feaa39268dda4ab2de850f33a4d24
       vertices: []
       indices: 
       edges: []
@@ -470,10 +470,10 @@ TextureImporter:
       name: Church Floor 16bit Scale_18
       rect:
         serializedVersion: 2
-        x: 307
-        y: 103
-        width: 100
-        height: 100
+        x: 308
+        y: 104
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -481,7 +481,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78dd5d04991b2414bb03c219e4b9834a
+      spriteID: 866a0326d83ef5b4b829816fcc7a1d65
       vertices: []
       indices: 
       edges: []
@@ -490,10 +490,10 @@ TextureImporter:
       name: Church Floor 16bit Scale_19
       rect:
         serializedVersion: 2
-        x: 409
-        y: 103
-        width: 100
-        height: 100
+        x: 410
+        y: 104
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -501,7 +501,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b05fd85acd4aca14a8b644430526f17c
+      spriteID: 4a2b3c5950c4904488c04290d2714623
       vertices: []
       indices: 
       edges: []
@@ -510,10 +510,10 @@ TextureImporter:
       name: Church Floor 16bit Scale_20
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 100
-        height: 100
+        x: 2
+        y: 2
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -521,7 +521,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f5b7b399fa7b304db8e50c1f5befb89
+      spriteID: 5cbe294d740c1bb4dafdc51056981183
       vertices: []
       indices: 
       edges: []
@@ -530,10 +530,10 @@ TextureImporter:
       name: Church Floor 16bit Scale_21
       rect:
         serializedVersion: 2
-        x: 103
-        y: 1
-        width: 100
-        height: 100
+        x: 104
+        y: 2
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -541,7 +541,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41a39d038c776c34c944343ee6278ce6
+      spriteID: af228b92f690ab14284985d2f3eada01
       vertices: []
       indices: 
       edges: []
@@ -550,10 +550,10 @@ TextureImporter:
       name: Church Floor 16bit Scale_22
       rect:
         serializedVersion: 2
-        x: 205
-        y: 1
-        width: 100
-        height: 100
+        x: 206
+        y: 2
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -561,7 +561,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df81a518a78aed54986e74ea15a5f5c7
+      spriteID: fed3be9a44836fd4bb1431f15fdac809
       vertices: []
       indices: 
       edges: []

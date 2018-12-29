@@ -30,7 +30,13 @@ public class PlayerDialogueTransmitter : MonoBehaviour {
     void Start () {
         CreateSingleton();
         anim = GetComponentInParent<Animator>();
-	}
+        PlayerMangerListener.GameStopped += DisableTalking;
+    }
+
+    private void OnApplicationQuit()
+    {
+        PlayerMangerListener.GameStopped -= DisableTalking;
+    }
 
     private void SetTalkingStance()
     {
@@ -67,5 +73,14 @@ public class PlayerDialogueTransmitter : MonoBehaviour {
             anim.SetFloat("IdleStance", stance);
         }
 
+    }
+
+    private void DisableTalking()
+    {
+        if (objectReference != null)
+        {
+            DialogueManager.instance.ClearText();
+            objectReference = null;
+        }
     }
 }

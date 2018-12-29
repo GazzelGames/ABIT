@@ -137,6 +137,7 @@ public class PlayerController : MonoBehaviour {
         Vector3 updatedPos = transform.position;
         transform.position = new Vector3(Mathf.RoundToInt(updatedPos.x * pixPerUnit) / pixPerUnit, Mathf.RoundToInt(updatedPos.y * pixPerUnit) / pixPerUnit, 0);
         rb.velocity = Vector2.zero;
+
     }
 
     public float test;
