@@ -19,7 +19,7 @@ public class EnemyCombatListener : MonoBehaviour {
     AudioClip hurtSound;
     AudioClip deathSound;
 
-    bool onFire;
+    private bool onFire;
     public bool OnFire
     {
         get { return onFire; }
@@ -63,7 +63,7 @@ public class EnemyCombatListener : MonoBehaviour {
         }
     }
 
-    bool frozen;
+    private bool frozen;
     public bool Frozen
     {
         get { return frozen; }
@@ -95,7 +95,9 @@ public class EnemyCombatListener : MonoBehaviour {
     }
 
     public GameObject lootGen;
-    float hp =1;
+    private float hp =1;
+    [HideInInspector]
+    public float maxHp = 1;
     public float HP
     {
         get

@@ -11,7 +11,7 @@ public class Mushroom : MonoBehaviour {
     public GameObject shieldSpell; //this reference is for the iron sword gameobject
 
     private GameObject player;  // this reference is the player object
-    private GameObject witch;
+    public GameObject witch;
 
     private void Start()
     {

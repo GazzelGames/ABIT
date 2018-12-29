@@ -8,7 +8,7 @@ public class StaticRenderAssignement : MonoBehaviour {
         spriteRenderer = GetComponentInParent<SpriteRenderer>();
         if (transform.parent.transform.position.y < 0)
         {
-            //spriteRenderer.sortingOrder = Mathf.Abs(Mathf.RoundToInt(transform.parent.transform.position.y));
+            spriteRenderer.sortingOrder = Mathf.Abs(Mathf.RoundToInt(transform.parent.transform.position.y));
         }
         else
         {

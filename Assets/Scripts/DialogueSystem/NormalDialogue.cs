@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 [System.Serializable]
 public class NormalDialogue {
 
-    [TextArea(3, 10)]
+    [TextArea(3, 12)]
     public string[] dialogue;
 
 

@@ -67,7 +67,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -99,7 +99,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,7 +110,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,10 +123,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 511
-        width: 100
-        height: 100
+        x: 2
+        y: 512
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,7 +134,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39f2a453855671b4cb731cc3c9a28ffe
+      spriteID: 083d7c4236dbd4348bc9e34b43529605
       vertices: []
       indices: 
       edges: []
@@ -143,10 +143,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_1
       rect:
         serializedVersion: 2
-        x: 103
-        y: 511
-        width: 100
-        height: 100
+        x: 104
+        y: 512
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,7 +154,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f58b4b3f86921554c808b4fb196ad2ae
+      spriteID: 602d309feae29c24eb03fcf82f62ef7b
       vertices: []
       indices: 
       edges: []
@@ -163,10 +163,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_2
       rect:
         serializedVersion: 2
-        x: 205
-        y: 511
-        width: 100
-        height: 100
+        x: 206
+        y: 512
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,7 +174,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 398bfcfb66515354e8aac29b975ed1cb
+      spriteID: 9ce8830236d79994e8d34047e5f83255
       vertices: []
       indices: 
       edges: []
@@ -183,10 +183,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_3
       rect:
         serializedVersion: 2
-        x: 307
-        y: 511
-        width: 100
-        height: 100
+        x: 308
+        y: 512
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,7 +194,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adde60ea09f5ad84180e53fdfe7bdbb8
+      spriteID: e054a498274e6cd4f9bd3966adf2a43e
       vertices: []
       indices: 
       edges: []
@@ -203,10 +203,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_4
       rect:
         serializedVersion: 2
-        x: 409
-        y: 511
-        width: 100
-        height: 100
+        x: 410
+        y: 512
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,7 +214,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7643ef4cbf83ace4b977677f987e55c9
+      spriteID: 414692eafcd6e964891ec8c60f7c0bac
       vertices: []
       indices: 
       edges: []
@@ -223,10 +223,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_5
       rect:
         serializedVersion: 2
-        x: 511
-        y: 511
-        width: 100
-        height: 100
+        x: 512
+        y: 512
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,7 +234,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4098972da6bed504682190931061c0ea
+      spriteID: 7c27409c510c14d4dbb66c9f0787c11c
       vertices: []
       indices: 
       edges: []
@@ -243,10 +243,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_6
       rect:
         serializedVersion: 2
-        x: 1
-        y: 409
-        width: 100
-        height: 100
+        x: 2
+        y: 410
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,7 +254,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea2da76800f5864459ab13d150346ca0
+      spriteID: 79c4b7f49f4071a4592716b490aeb449
       vertices: []
       indices: 
       edges: []
@@ -263,10 +263,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_7
       rect:
         serializedVersion: 2
-        x: 103
-        y: 409
-        width: 100
-        height: 100
+        x: 104
+        y: 410
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,7 +274,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 437e1dce93a11d542bb46da9a470157e
+      spriteID: b18462fa8ce4da149b7c6a3127be0007
       vertices: []
       indices: 
       edges: []
@@ -283,10 +283,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_8
       rect:
         serializedVersion: 2
-        x: 205
-        y: 409
-        width: 100
-        height: 100
+        x: 206
+        y: 410
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,7 +294,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c95e8dd683f5774786753bee13e1efa
+      spriteID: d273fb6647566ca41a95ec533fe2b2ba
       vertices: []
       indices: 
       edges: []
@@ -303,10 +303,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_9
       rect:
         serializedVersion: 2
-        x: 307
-        y: 409
-        width: 100
-        height: 100
+        x: 308
+        y: 410
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -314,7 +314,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69964ca9bdad5b147881cac107e451ce
+      spriteID: cdccc2578022e8d46841dcd33cbfc92e
       vertices: []
       indices: 
       edges: []
@@ -323,10 +323,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_10
       rect:
         serializedVersion: 2
-        x: 409
-        y: 409
-        width: 100
-        height: 100
+        x: 410
+        y: 410
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,7 +334,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 026684ccd72392a41a92f0141279a352
+      spriteID: 279434fcabb6bf948bb00270b8931ca2
       vertices: []
       indices: 
       edges: []
@@ -343,10 +343,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_11
       rect:
         serializedVersion: 2
-        x: 511
-        y: 409
-        width: 100
-        height: 100
+        x: 512
+        y: 410
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -354,7 +354,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a67d8c4c4bf29ed4d9d0dae8809db9a7
+      spriteID: ef5fee4c286cb9d42b58ffb1c996464b
       vertices: []
       indices: 
       edges: []
@@ -363,10 +363,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_12
       rect:
         serializedVersion: 2
-        x: 1
-        y: 307
-        width: 100
-        height: 100
+        x: 2
+        y: 308
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -374,7 +374,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dab3e7d15a99fd9439aef6774b425c17
+      spriteID: 6ee94a380a2409b498e1f751f23e9b7d
       vertices: []
       indices: 
       edges: []
@@ -383,10 +383,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_13
       rect:
         serializedVersion: 2
-        x: 103
-        y: 307
-        width: 100
-        height: 100
+        x: 104
+        y: 308
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -394,7 +394,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93398bce96ff8084aa541d2c4025dea3
+      spriteID: dcb4572c743b873438f5bdeb44146caa
       vertices: []
       indices: 
       edges: []
@@ -403,10 +403,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_14
       rect:
         serializedVersion: 2
-        x: 205
-        y: 307
-        width: 100
-        height: 100
+        x: 206
+        y: 308
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -414,7 +414,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd7e7dced4940eb468347f2ff5dd387b
+      spriteID: a84e387f702ea124ea998bd611ee62ec
       vertices: []
       indices: 
       edges: []
@@ -423,10 +423,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_15
       rect:
         serializedVersion: 2
-        x: 307
-        y: 307
-        width: 100
-        height: 100
+        x: 308
+        y: 308
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -434,7 +434,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22d46e6930c303f44ae7c0b8b9e23a00
+      spriteID: 74e6455038fb62a4ebdc404d42955cda
       vertices: []
       indices: 
       edges: []
@@ -443,10 +443,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_16
       rect:
         serializedVersion: 2
-        x: 409
-        y: 307
-        width: 100
-        height: 100
+        x: 410
+        y: 308
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -454,7 +454,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d01add9dde03f1744b50b46c45c3212d
+      spriteID: c61ce0a9f8dd74348a28cd2038f1c14b
       vertices: []
       indices: 
       edges: []
@@ -463,10 +463,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_17
       rect:
         serializedVersion: 2
-        x: 511
-        y: 307
-        width: 100
-        height: 100
+        x: 512
+        y: 308
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -474,7 +474,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f632d8545b5a9fa43b1e25ec7edfe2bf
+      spriteID: 64cc093df2431684c8346b12a040fb82
       vertices: []
       indices: 
       edges: []
@@ -483,10 +483,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_18
       rect:
         serializedVersion: 2
-        x: 1
-        y: 205
-        width: 100
-        height: 100
+        x: 2
+        y: 206
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -494,7 +494,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd2cbc30788ffe2488b8a3d204a3b328
+      spriteID: f024c8e5c4bc9584da12f2d00fc8b0e3
       vertices: []
       indices: 
       edges: []
@@ -503,10 +503,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_19
       rect:
         serializedVersion: 2
-        x: 103
-        y: 205
-        width: 100
-        height: 100
+        x: 104
+        y: 206
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -514,7 +514,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f100cf70b045b6e419fa446ecd278a6c
+      spriteID: 6803ddc61ad4e034eb84da784a9ecfd5
       vertices: []
       indices: 
       edges: []
@@ -523,10 +523,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_20
       rect:
         serializedVersion: 2
-        x: 205
-        y: 205
-        width: 100
-        height: 100
+        x: 206
+        y: 206
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -534,7 +534,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06012c37ee378c14a95be7e4ad3bf0bc
+      spriteID: 57353ae5218c9ad4c82da33bd879a8cb
       vertices: []
       indices: 
       edges: []
@@ -543,10 +543,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_21
       rect:
         serializedVersion: 2
-        x: 307
-        y: 205
-        width: 100
-        height: 100
+        x: 308
+        y: 206
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -554,7 +554,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73213f5ad8a8f764bac4331925370862
+      spriteID: dd2b245e2fc0e44448e8db9c08f42d5d
       vertices: []
       indices: 
       edges: []
@@ -563,10 +563,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_22
       rect:
         serializedVersion: 2
-        x: 409
-        y: 205
-        width: 100
-        height: 100
+        x: 410
+        y: 206
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -574,7 +574,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 345d9dd9d0f69204fa1eecce70bde3e4
+      spriteID: b28a6aa532ffa514fb151d925a9c3d1f
       vertices: []
       indices: 
       edges: []
@@ -583,10 +583,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_23
       rect:
         serializedVersion: 2
-        x: 511
-        y: 205
-        width: 100
-        height: 100
+        x: 512
+        y: 206
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -594,7 +594,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff9d9a1e682e7f44289fa13956d88a70
+      spriteID: be220932ed89e4442881ef9327ace58e
       vertices: []
       indices: 
       edges: []
@@ -603,10 +603,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_24
       rect:
         serializedVersion: 2
-        x: 1
-        y: 103
-        width: 100
-        height: 100
+        x: 2
+        y: 104
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -614,7 +614,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 470160d41d716e6489a37ffe8012fc1f
+      spriteID: 5c2c6b55391b4494ca7e0d08b5489e1d
       vertices: []
       indices: 
       edges: []
@@ -623,10 +623,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_25
       rect:
         serializedVersion: 2
-        x: 103
-        y: 103
-        width: 100
-        height: 100
+        x: 104
+        y: 104
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -634,7 +634,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 761b554d664fe9e43a0b676f47528145
+      spriteID: 90f0211891b52704482a550ac5acfae0
       vertices: []
       indices: 
       edges: []
@@ -643,10 +643,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_26
       rect:
         serializedVersion: 2
-        x: 205
-        y: 103
-        width: 100
-        height: 100
+        x: 206
+        y: 104
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -654,7 +654,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23faea1d3cb15024597a8a0691b48f6f
+      spriteID: f8420862539d990478acf55488156eae
       vertices: []
       indices: 
       edges: []
@@ -663,10 +663,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_27
       rect:
         serializedVersion: 2
-        x: 307
-        y: 103
-        width: 100
-        height: 100
+        x: 308
+        y: 104
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -674,7 +674,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b901b2d0e4dfbdb4683776787a03dd6c
+      spriteID: 810159b4682779d46a5ec29be10a6423
       vertices: []
       indices: 
       edges: []
@@ -683,10 +683,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_28
       rect:
         serializedVersion: 2
-        x: 409
-        y: 103
-        width: 100
-        height: 100
+        x: 410
+        y: 104
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -694,7 +694,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e36636cdb778c9c4cbf658e751a13a15
+      spriteID: 5e1c5603f5a195d468fdee897f09887a
       vertices: []
       indices: 
       edges: []
@@ -703,10 +703,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_29
       rect:
         serializedVersion: 2
-        x: 511
-        y: 103
-        width: 100
-        height: 100
+        x: 512
+        y: 104
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -714,7 +714,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c176a54fdea71342a53ec096c7e1552
+      spriteID: 553967095d4e8514b94ca4aefd9e1590
       vertices: []
       indices: 
       edges: []
@@ -723,10 +723,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_30
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 100
-        height: 100
+        x: 2
+        y: 2
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -734,7 +734,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b3e1fd35b23f294ca33f3145261aa92
+      spriteID: 2216f8b759aabb54dbbb95e7657089ea
       vertices: []
       indices: 
       edges: []
@@ -743,10 +743,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_31
       rect:
         serializedVersion: 2
-        x: 103
-        y: 1
-        width: 100
-        height: 100
+        x: 104
+        y: 2
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -754,7 +754,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15683d75a61d36b479d794ef8b6febc0
+      spriteID: efe1385ecf8bd7649876286bb041bcec
       vertices: []
       indices: 
       edges: []
@@ -763,10 +763,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_32
       rect:
         serializedVersion: 2
-        x: 205
-        y: 1
-        width: 100
-        height: 100
+        x: 206
+        y: 2
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -774,7 +774,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7503038a0a1df3342a11a6521c24b6ad
+      spriteID: 3903108481f02414a8bfd42fe70d5f83
       vertices: []
       indices: 
       edges: []
@@ -783,10 +783,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_33
       rect:
         serializedVersion: 2
-        x: 307
-        y: 1
-        width: 100
-        height: 100
+        x: 308
+        y: 2
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -794,7 +794,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8f784362d17a5d40b929e983e5fbcf9
+      spriteID: 818d35858c5a7bc4cbf605a666b1569f
       vertices: []
       indices: 
       edges: []
@@ -803,10 +803,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_34
       rect:
         serializedVersion: 2
-        x: 409
-        y: 1
-        width: 100
-        height: 100
+        x: 410
+        y: 2
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -814,7 +814,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 744053dffc5e0024abdf4548af08db36
+      spriteID: f4945673b779c904d8b31368c5a76f7a
       vertices: []
       indices: 
       edges: []
@@ -823,10 +823,10 @@ TextureImporter:
       name: MoutianDungeonInterior 16bit Scale_35
       rect:
         serializedVersion: 2
-        x: 511
-        y: 1
-        width: 100
-        height: 100
+        x: 512
+        y: 2
+        width: 98
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -834,7 +834,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e3bb4c89183a7d4fb88c91f0a192b17
+      spriteID: c096a8bae0616ec4fbc58c94da069b87
       vertices: []
       indices: 
       edges: []

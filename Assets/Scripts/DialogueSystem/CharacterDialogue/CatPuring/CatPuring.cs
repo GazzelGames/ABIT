@@ -7,6 +7,9 @@ public class CatPuring : MonoBehaviour {
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        audioSource.loop = true;
+        audioSource.playOnAwake = false;
+        audioSource.enabled = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -15,18 +18,16 @@ public class CatPuring : MonoBehaviour {
         {
             audioSource.enabled = true;
             audioSource.Play();
-            audioSource.loop = true;
         }
 
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Player")
         {
-            audioSource.enabled = false;
-            audioSource.loop = false;
             audioSource.Stop();
+            audioSource.enabled = false;
         }
 
     }

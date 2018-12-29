@@ -29,10 +29,17 @@ public class GreatSwordSkeleton : MonoBehaviour {
 
     private void OnEnable()
     {
+
+        Invoke("DelayEnabled", 0.25f);
+    }
+
+    void DelayEnabled()
+    {
         GetComponent<Animator>().enabled = false;
         if (canSubscribe)
         {
             skeletonListener.Subscribe();
+
             if (PlayerMangerListener.instance.StateOf == GameState.StateOfGame.GamePaused)
             {
                 skeletonListener.GameStopped();

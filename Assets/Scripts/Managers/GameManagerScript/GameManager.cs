@@ -37,11 +37,51 @@ public class GameManager : MonoBehaviour {
     // Use this for initialization
     void Awake () {
         VSync = true;
+
         Application.targetFrameRate = 30;
         SFXModifier = VolumeModifier = 1f;
 		MakeSingleton();
         //set cursor to not be visible
-        //Cursor.visible = false;
+        Cursor.visible = false;
+    }
+
+    public void ChangeFrameRate(int change)
+    {
+        switch (change)
+        {
+            case 0:
+                {
+                    Application.targetFrameRate = 30;
+                    print("FrameRate is 30");
+                    break;
+                }
+            case 1:
+                {
+                    Application.targetFrameRate = 60;
+                    print("FrameRate is 60");
+                    break;
+                }
+            case 2:
+                {
+                    Application.targetFrameRate = 120;
+                    print("FrameRate is 120");
+                    break;
+                }
+        }
+    }
+
+    //this is to change VSync during run time
+    public void ChangeVSync()
+    {
+        VSync = !vSync;
+        if (VSync)
+        {
+            print("VSync is On");
+        }
+        else
+        {
+            print("Vsync is Off");
+        }
     }
 
 	//this creates and sustains the singleton

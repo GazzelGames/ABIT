@@ -54,7 +54,7 @@ public class HunterDialogue : MonoBehaviour {
         {
             if (canSubscribe)
             {
-                this.enabled = false;
+                GetComponent<HunterDialogue>().enabled = false;
 
                 //hunterListener.Subscribe();
                 parentHunter.transform.position = movementLocations[0].position;     //this places the Hunter infront of Govenor House    
@@ -111,9 +111,9 @@ public class HunterDialogue : MonoBehaviour {
                 movingIsDone = true;
                 print("Parent is null");
                 parentHunter.transform.parent.gameObject.GetComponent<WorldSectionTrigger>().areaObjects.Remove(parentHunter);
-                //parentHunter.transform.parent = null;
+                parentHunter.transform.parent = null;
                 showPlayerPoint = false;
-                this.enabled = false;
+                GetComponent<HunterDialogue>().enabled = false;
                 GetComponent<BoxCollider2D>().enabled = true;
             }
 
@@ -215,23 +215,26 @@ public class HunterDialogue : MonoBehaviour {
     {
         if (PlayerDialogueTransmitter.instance.objectReference == gameObject)
         {
-            DialogueManager.instance.DisplayTalk();
             if (Input.GetKey(KeyCode.C) && PlayerMangerListener.instance.StateOf==GameState.StateOfGame.GameListening)
             {
                 if(WorldManager.instance.worldState == WorldState.WorldStateEnum.zombieAttack)
                 {
                     GetZombieAttackDialogue();
                     SetTalkingStance();
-                    DialogueManager.instance.ClearText();
                 }
                 else
                 {
                     GetDialogue();
                     SetTalkingStance();
-                    DialogueManager.instance.ClearText();
                 }
-                DialogueManager.instance.ClearText();
             }
+        }
+        if(PlayerMangerListener.instance.StateOf == GameState.StateOfGame.GameListening)
+        {
+            DialogueManager.instance.DisplayTalk();
+        }else
+        {
+            DialogueManager.instance.ClearText();
         }
     }
 

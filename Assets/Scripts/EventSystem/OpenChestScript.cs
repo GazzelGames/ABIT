@@ -1,7 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class OpenChestScript : MonoBehaviour {
 
@@ -41,6 +39,8 @@ public class OpenChestScript : MonoBehaviour {
     {
         if (collision.gameObject.CompareTag("Player")&&Input.GetKey(KeyCode.C))
         {
+            GetComponent<CapsuleCollider2D>().enabled = false;
+            this.enabled = false;
             AudioClip OpenChest = Resources.Load<AudioClip>("Audio/OpeningChest");
             AudioSource.PlayClipAtPoint(OpenChest,transform.position);
             objSprite.sprite = openChest;
@@ -48,9 +48,13 @@ public class OpenChestScript : MonoBehaviour {
             GetComponent<BoxCollider2D>().offset = new Vector2(0, 1.096838f);
             StartCoroutine(ItemRecieved(collision.gameObject));
             DialogueManager.instance.ClearText();
-            GetComponent<CapsuleCollider2D>().enabled = false;
         }
     }
+
+    /*async void Awake()
+    {
+        await Task.Equals(PlayerMangerListener.instance.StateOf, GameState.StateOfGame.GameListening);
+    }*/
 
     IEnumerator ItemRecieved(GameObject player)
     {

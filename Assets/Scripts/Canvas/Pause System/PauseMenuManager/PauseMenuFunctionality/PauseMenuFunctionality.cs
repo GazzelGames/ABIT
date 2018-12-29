@@ -196,6 +196,10 @@ public class PauseMenuFunctionality : MonoBehaviour {
 
     void LoadMainMenu()
     {
+        #if UNITY_STANDALONE_WIN
+                Application.Quit();
+        #endif
+
         SceneManager.LoadScene("MainMenu");
     }
 }

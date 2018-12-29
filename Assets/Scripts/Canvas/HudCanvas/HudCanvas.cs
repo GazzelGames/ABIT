@@ -48,9 +48,19 @@ public class HudCanvas : MonoBehaviour {
         PlayerMangerListener.PlayerDead += PlayerDead;
     }
 
+    private void Start()
+    {
+        PlayerMangerListener.GameStopped += Disable;
+        PlayerMangerListener.PlayerDead += Disable;
+        PlayerMangerListener.GameResumed += Restore;
+    }
+
     private void OnApplicationQuit()
     {
-       PlayerMangerListener.PlayerDead -= PlayerDead;
+        PlayerMangerListener.PlayerDead -= PlayerDead;
+        PlayerMangerListener.GameStopped -= Disable;
+        PlayerMangerListener.PlayerDead -= Disable;
+        PlayerMangerListener.GameResumed -= Restore;
     }
 
     //these are the values of for the magik meter
@@ -332,4 +342,13 @@ public class HudCanvas : MonoBehaviour {
         //I need this to be invoked 
     }
 
+    void Disable()
+    {
+        this.enabled = false;
+    }
+
+    void Restore()
+    {
+        this.enabled = true;
+    }
 }
