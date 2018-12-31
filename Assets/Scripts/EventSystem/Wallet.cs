@@ -4,7 +4,7 @@ using UnityEngine;
 public class Wallet : MonoBehaviour {
 
     public NormalDialogue nd;
-
+    public GameObject moneyValue;
 #pragma warning disable 649
     [SerializeField]
     private Equipment wallet;
@@ -12,6 +12,8 @@ public class Wallet : MonoBehaviour {
 
     private void Start()
     {
+        moneyValue = GameObject.Find("HudCanvas").transform.GetChild(2).gameObject;
+        moneyValue.SetActive(true);
         GetComponent<AudioSource>().volume = GameManager.instance.VolumeModifier;
         GetComponent<AudioSource>().Play();
         HudCanvas.instance.MaxCurrency = wallet.itemValues.moneyValue;
