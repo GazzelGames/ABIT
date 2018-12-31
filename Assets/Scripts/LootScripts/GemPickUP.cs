@@ -14,6 +14,8 @@ public class GemPickUP : MonoBehaviour {
         if (collision.gameObject.CompareTag("Player"))
         {
             HudCanvas.instance.CurrentCurrency = currencyAmount;
+            AudioClip moneySound = Resources.Load<AudioClip>("Audio/MoneyPickUp");
+            AudioSource.PlayClipAtPoint(moneySound, transform.position, 1);
             Destroy(gameObject);
         }
     }

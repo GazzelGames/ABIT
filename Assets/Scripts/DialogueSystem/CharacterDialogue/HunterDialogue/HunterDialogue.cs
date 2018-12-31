@@ -6,6 +6,7 @@ public class HunterDialogue : MonoBehaviour {
     //this is for dialogue for the before the undead attack;
     public int element;
     public NormalDialogue[] dialogue;
+    WorldSectionTrigger worldSectionTrigger;
 
     //this is for the dialogue for after the attack;
     public int attackDialogueElement;
@@ -111,7 +112,10 @@ public class HunterDialogue : MonoBehaviour {
                 movingIsDone = true;
                 print("Parent is null");
                 parentHunter.transform.parent.gameObject.GetComponent<WorldSectionTrigger>().areaObjects.Remove(parentHunter);
-                parentHunter.transform.parent = null;
+                worldSectionTrigger = GetComponentInParent<WorldSectionTrigger>();
+                worldSectionTrigger.areaObjects.Remove(parentHunter);
+                //parentHunter.transform.parent = null;
+
                 showPlayerPoint = false;
                 GetComponent<HunterDialogue>().enabled = false;
                 GetComponent<BoxCollider2D>().enabled = true;

@@ -9,7 +9,7 @@ public class HudCanvas : MonoBehaviour {
 
     public static HudCanvas instance;
     private GameObject player;
-
+    AudioClip moneySound;
     public EventSystem eventSystem;
     public GameObject priviousButton;
 
@@ -27,6 +27,7 @@ public class HudCanvas : MonoBehaviour {
 
     private void Awake()
     {
+        moneySound = Resources.Load<AudioClip>("Audio/MoneyPickUp");
         eventSystem = GameObject.Find("EventSystem").GetComponent<EventSystem>();
         magicValue = new List<int>();
         player = GameObject.Find("Player");
@@ -184,8 +185,6 @@ public class HudCanvas : MonoBehaviour {
     bool scaleUp,scaleDown;
     IEnumerator ScaleMoneyUp()
     {
-        AudioClip moneySound = Resources.Load<AudioClip>("Audio/MoneyPickUp");
-        AudioSource.PlayClipAtPoint(moneySound, player.transform.position, 1);
         int var = 0;
         int tempCurrency = currency;
         int tempMoneyPickUp = moneyPickUp;
@@ -201,7 +200,7 @@ public class HudCanvas : MonoBehaviour {
             currencyText.text = (tempCurrency + var).ToString();
             AudioSource.PlayClipAtPoint(moneySound, player.transform.position,1);
             //play audio clip
-            yield return null;
+            yield return new WaitForEndOfFrame();
         }
         currency = tempCurrency + var;
         scaleUp = false;
@@ -209,8 +208,7 @@ public class HudCanvas : MonoBehaviour {
     }
     IEnumerator ScaleMoneyDown()
     {
-        AudioClip moneySound = Resources.Load<AudioClip>("Audio/MoneyPickUp");
-        AudioSource.PlayClipAtPoint(moneySound, player.transform.position, 1);
+        
         int var = 0;
         int tempCurrency = currency;
         int tempMoneyPickUp = moneyPickUp;
@@ -226,7 +224,7 @@ public class HudCanvas : MonoBehaviour {
             currencyText.text = (tempCurrency + var).ToString();
             AudioSource.PlayClipAtPoint(moneySound, player.transform.position, 1);
             //play audio clip
-            yield return null;
+            yield return new WaitForEndOfFrame();
         }
         currency = tempCurrency + var;
         scaleDown = false;
