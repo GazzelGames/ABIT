@@ -101,6 +101,7 @@ public class GovenorDialogueHandler : MonoBehaviour {
         CameraController.instance.targetReached = false;
         PlayerMangerListener.instance.HasControl = true;
 
+        GetComponent<BoxCollider2D>().enabled = false;
         WorldManager.instance.worldState = WorldState.WorldStateEnum.zombieAttack;
         yield return null;
     }

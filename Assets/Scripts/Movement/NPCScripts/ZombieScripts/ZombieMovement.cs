@@ -75,6 +75,14 @@ public class ZombieMovement : MonoBehaviour {
         }
     }
 
+    private void OnDestroy()
+    {
+        if (!canSubscribe)
+        {
+            zombieListener.Unsubscribe();
+        }
+    }
+
     private void Update()
     {
         if (playerInRange.playerInRange&&!combatListener.OnFire)

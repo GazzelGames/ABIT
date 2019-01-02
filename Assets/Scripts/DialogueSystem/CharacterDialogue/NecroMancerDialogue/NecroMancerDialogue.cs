@@ -16,8 +16,27 @@ public class NecroMancerDialogue : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        PlayerMangerListener.PlayerDead += ResetDialogue;
         NecroMancerManager.EndFirstBattle += EndofFirstEncounter;
         movePlayerPoint = new Vector3(transform.position.x, transform.position.y - 4f, 0);
+    }
+
+    private void OnApplicationQuit()
+    {
+        PlayerMangerListener.PlayerDead -= ResetDialogue;
+    }
+
+    void ResetDialogue()
+    {
+        Invoke("Restore", 1.5f);
+    }
+
+    void Restore()
+    {
+        this.enabled = true;
+        GetComponent<BoxCollider2D>().enabled = true;
+        summonedBlock.SetActive(false);
+        NecroMancerManager.instance.FirstEncounter = false;
     }
 
     void OnDisable()
@@ -41,7 +60,8 @@ public class NecroMancerDialogue : MonoBehaviour {
     {
         MusicManager.instance.AreaTag = "NecroIntro";
         summonedBlock.SetActive(true);
-        Destroy(GetComponent<BoxCollider2D>());
+        GetComponent<BoxCollider2D>().enabled = false;
+        //Destroy(GetComponent<BoxCollider2D>());
         yield return new WaitUntil(() => CameraController.instance.targetReached);
 
         if (NecroMancerManager.instance.NecroMetPlayer)

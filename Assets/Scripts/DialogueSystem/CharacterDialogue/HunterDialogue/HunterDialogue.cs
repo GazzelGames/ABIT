@@ -6,7 +6,6 @@ public class HunterDialogue : MonoBehaviour {
     //this is for dialogue for the before the undead attack;
     public int element;
     public NormalDialogue[] dialogue;
-    WorldSectionTrigger worldSectionTrigger;
 
     //this is for the dialogue for after the attack;
     public int attackDialogueElement;
@@ -109,13 +108,11 @@ public class HunterDialogue : MonoBehaviour {
             }
             else
             {
+                anim.SetFloat("IdleStance", 2);
+                anim.SetBool("IsMoving", false);
                 movingIsDone = true;
                 print("Parent is null");
                 parentHunter.transform.parent.gameObject.GetComponent<WorldSectionTrigger>().areaObjects.Remove(parentHunter);
-                worldSectionTrigger = GetComponentInParent<WorldSectionTrigger>();
-                worldSectionTrigger.areaObjects.Remove(parentHunter);
-                //parentHunter.transform.parent = null;
-
                 showPlayerPoint = false;
                 GetComponent<HunterDialogue>().enabled = false;
                 GetComponent<BoxCollider2D>().enabled = true;
@@ -161,6 +158,8 @@ public class HunterDialogue : MonoBehaviour {
         {
             case 0:
                 {
+                    GetComponentInParent<WorldSectionTrigger>().areaObjects.Remove(parentHunter);
+                    //parentHunter.transform.parent = null;
                     GetComponent<BoxCollider2D>().enabled = false;
                     DialogueManager.instance.StartTalking(zombieAttackDialogue[attackDialogueElement]);
                     attackDialogueElement++;

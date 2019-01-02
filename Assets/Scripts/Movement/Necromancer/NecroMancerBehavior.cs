@@ -28,11 +28,12 @@ public class NecroMancerBehavior : MonoBehaviour {
     public bool canHit;
     private void Awake()
     {
+        PlayerMangerListener.PlayerDead += ResetBattle;
+        NecroMancerManager.StartFirstBattle += StartCastingShield;
         zombies = new List<GameObject>();
         audioSource = GetComponent<AudioSource>();
         necroMancerListener = new NecroMancerListener();
         necroMancerListener.SetReferences(this, GetComponent<CapsuleCollider2D>(), GetComponent<Animator>());
-        NecroMancerManager.StartFirstBattle += StartCastingShield;
         startingPos = transform.position;
         canHit = false;
         necroMancerFunctionality.DeclareQuad(transform.position);
@@ -46,6 +47,12 @@ public class NecroMancerBehavior : MonoBehaviour {
         //rb = GetComponent<Rigidbody2D>();
         moveCon.Initialize(gameObject, anim);
        
+    }
+
+    private void OnApplicationQuit()
+    {
+        PlayerMangerListener.PlayerDead -= ResetBattle;
+        NecroMancerManager.StartFirstBattle -= StartCastingShield;
     }
 
     private void Start()
@@ -63,7 +70,6 @@ public class NecroMancerBehavior : MonoBehaviour {
         {
             necroMancerListener.Unsubscribe();
         }
-        NecroMancerManager.StartFirstBattle -= StartCastingShield;
     }
 
     private void Update()
@@ -171,11 +177,13 @@ public class NecroMancerBehavior : MonoBehaviour {
         GameObject one = Instantiate(necroMancerFunctionality.zombie, newPos, transform.rotation);
         zombies.Add(one);
         one.AddComponent<RemoveZombiesFromBehavior>().parent = gameObject;
+        one.AddComponent<DestroyWithPlayer>();
 
         newPos = transform.position + new Vector3(Random.Range(-offset, offset), Random.Range(-offset, offset), 0);
         GameObject two = Instantiate(necroMancerFunctionality.zombie, newPos, transform.rotation);
         zombies.Add(two);
         two.AddComponent<RemoveZombiesFromBehavior>().parent = gameObject;
+        two.AddComponent<DestroyWithPlayer>();
     }
 
     IEnumerator Phase3()
@@ -245,6 +253,23 @@ public class NecroMancerBehavior : MonoBehaviour {
     private void ResetAttacking()
     {
         anim.SetBool("Attacking", false);
+    }
+
+    void ResetBattle()
+    {
+        StopAllCoroutines();
+        Invoke("ResetNecro", 1.5f);
+    }
+    void ResetNecro()
+    {
+        GetComponent<SpriteRenderer>().enabled = true;
+        necroMancerFunctionality.health = 6;
+        transform.position = startingPos;
+        anim.SetFloat("IdleStance", 0);
+        anim.SetBool("IsMoving", false);
+        MusicManager.instance.AreaTag = "MoutianInterior";
+        this.enabled = false;
+        necroMancerFunctionality.shield.SetActive(false);
     }
 }
 
