@@ -68,8 +68,6 @@ public class CameraController : MonoBehaviour {
 	void TargetTransform(){
         Vector3 currentVec = variablePos - transform.position;
         Vector3 vectorOffset = new Vector3(currentVec.x, currentVec.y, 0);
-        print(vectorOffset.ToString());
-        print(vectorOffset.magnitude.ToString());
         if (vectorOffset.magnitude > 0.3f)
         {
             transform.Translate(vectorOffset * Time.deltaTime * cameraSpeed);
@@ -80,8 +78,6 @@ public class CameraController : MonoBehaviour {
             transform.position = variablePos;
             targetReached = true;
         }
-        print(vectorOffset.ToString());
-        print(vectorOffset.magnitude.ToString());
     }
 	void InitializeCamera(){
 		transform.position = new Vector3 (Player.transform.position.x, Player.transform.position.y, -10);

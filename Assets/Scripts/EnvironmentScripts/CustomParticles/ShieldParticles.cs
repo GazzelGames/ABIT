@@ -8,7 +8,7 @@ public class ShieldParticles : MonoBehaviour {
     public GameObject end;
     private void Awake()
     {
-        end = GameObject.Find("NecroMancer");
+        end = GameObject.Find("NecroMancer(Clone)");
     }
 
     private void OnEnable()

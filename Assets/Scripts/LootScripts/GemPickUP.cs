@@ -9,6 +9,21 @@ public class GemPickUP : MonoBehaviour {
     private int currencyAmount;
 #pragma warning restore 649
 
+    private void Start()
+    {
+        PlayerMangerListener.PlayerDead += PlayerDied;
+    }
+
+    private void OnDestroy()
+    {
+        PlayerMangerListener.PlayerDead -= PlayerDied;
+    }
+
+    void PlayerDied()
+    {
+        Destroy(gameObject);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))

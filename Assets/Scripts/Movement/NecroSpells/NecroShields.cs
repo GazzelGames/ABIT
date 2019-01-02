@@ -39,7 +39,8 @@ public class NecroShields : MonoBehaviour {
 
                 if (necroMancer.GetComponent<NecroMancerBehavior>().necroMancerFunctionality.health < 6)
                 {
-                    StartCoroutine(DestroyParticles());
+                    StopAllCoroutines();
+                    DestroyParticles();
                 }
                 else
                 {
@@ -61,21 +62,26 @@ public class NecroShields : MonoBehaviour {
     {
         shieldDestroyedSFX = Resources.Load<AudioClip>("Audio/ShieldExplosionsfx_exp_short_hard9");
         shieldListener = new ShieldListener();
-        necroMancer = GameObject.Find("NecroMancer").transform;
+        necroMancer = transform.parent.parent.gameObject.transform;
         parent = transform.parent.gameObject;
         phaseShift = Random.Range(0, 1f);
-        for (int i = 0; i < 95; i++)
-        {
-            GameObject preFab = Instantiate(particle, transform.position, transform.rotation) as GameObject;
-            particles.Add(preFab);
-            preFab.SetActive(false);
-        }
+
         shieldListener.SetReferences(this, GetComponent<Collider2D>());
     }
 
     void OnEnable () {
+        if (particles.Count == 0)
+        {
+            for (int i = 0; i < 95; i++)
+            {
+                GameObject preFab = Instantiate(particle, transform.position, transform.rotation) as GameObject;
+                particles.Add(preFab);
+                preFab.SetActive(false);
+            }
+        }
         if (canSubscribe)
         {
+
             shieldListener.Subscribe();
             canSubscribe = false;
             health = 2;
@@ -151,15 +157,16 @@ public class NecroShields : MonoBehaviour {
         }
     }
 
-    public IEnumerator DestroyParticles ()
+    public void DestroyParticles()
     {
         gameObject.SetActive(false);
         transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().enabled = false;
         foreach (GameObject particle in particles)
         {
+            //particles.Remove(particle);
             Destroy(particle);
-            yield return new WaitForEndOfFrame();
         }
+        particles = new List<GameObject>();
     }
 
     float phaseShift;
@@ -188,21 +195,26 @@ public class NecroShields : MonoBehaviour {
         }
     }
 
-    void ResetBattle()
-    {
-        TestFunction();
-        canSubscribe = true;
-        PlayerMangerListener.PlayerDead -= ResetBattle;
+    public void ResetBattle()
+    {    
+        StopAllCoroutines();
+        print("Coroutines are stopped");
+        foreach (GameObject obj in particles)
+        {
+            print("Particle removed");
+            Destroy(obj);
+        }
+        particles = new List<GameObject>();
+        shieldListener.Unsubscribe();
+        Destroy(gameObject);
+        //TestFunction();
+        //canSubscribe = true;
+       // PlayerMangerListener.PlayerDead -= ResetBattle;*/
     }
 
     void TestFunction()
     {
-        gameObject.SetActive(false);
-        transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().enabled = false;
-        foreach (GameObject particle in particles)
-        {
-            Destroy(particle);
-        }
+
     }
 }
 

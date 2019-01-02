@@ -2,6 +2,8 @@
 
 public class NecroMancerManager : MonoBehaviour {
 
+    //public GameObject necroCharacter;
+
     public delegate void StartBehavior();
     public static event StartBehavior StartFirstBattle;
     public static event StartBehavior EndFirstBattle;
@@ -33,11 +35,17 @@ public class NecroMancerManager : MonoBehaviour {
         }
         set
         {
-            if (value)
+            firstEncounter = true;
+            if (firstEncounter)
             {
-                firstEncounter = true;
+                print("StartBattle has begun");
                 StartFirstBattle();
             }
+            else
+            {
+                print("The Bool is reset");
+            }
+
         }        
     }
     bool firstEncounterDone;
@@ -56,6 +64,5 @@ public class NecroMancerManager : MonoBehaviour {
 
     public bool necroMetPlayer;
     public bool NecroMetPlayer { get { return necroMetPlayer; } set { necroMetPlayer = value; } }
-
 
 }

@@ -6,6 +6,7 @@ public class SelfShield : MonoBehaviour {
 
     public GameObject[] preFabs;
     public Vector3[] offsets;
+    public GameObject summonedBlock;
 
     public GameObject necroMancer;
 
@@ -45,12 +46,16 @@ public class SelfShield : MonoBehaviour {
     void DisableShield()
     {
         necroMancer.GetComponent<CapsuleCollider2D>().enabled = true;
-        this.gameObject.SetActive(false);
+        //this.gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 
     private void Awake()
     {
         necroMancer = transform.parent.gameObject;
+        GameObject block = Instantiate(summonedBlock, GameObject.Find("SummonedBlockTransform").transform) as GameObject;
+        block.transform.position = GameObject.Find("SummonedBlockTransform").transform.position;
+        block.AddComponent<DestroyWithPlayer>();
     }
 
     // Use this for initialization
@@ -67,7 +72,7 @@ public class SelfShield : MonoBehaviour {
     bool isQuit;
     private void OnDisable()
     {
-        if (isQuit == false)
+        if (isQuit == false&&HudCanvas.instance.CurrentHP>0)
         {
             necroMancer.GetComponent<CapsuleCollider2D>().enabled = true;
             necroMancer.GetComponent<NecroMancerBehavior>().canHit = true;

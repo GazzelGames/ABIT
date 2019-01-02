@@ -15,7 +15,7 @@ public class NecroMancerBehavior : MonoBehaviour {
     private NecroMancerListener necroMancerListener;
     private MovementController2 moveCon;
     //private Rigidbody2D rb;
-    private Animator anim;
+    public Animator anim;
     private GameObject player;
     public Vector3 startingPos;
 
@@ -28,6 +28,7 @@ public class NecroMancerBehavior : MonoBehaviour {
     public bool canHit;
     private void Awake()
     {
+        //anim = GetComponent<Animator>();
         PlayerMangerListener.PlayerDead += ResetBattle;
         NecroMancerManager.StartFirstBattle += StartCastingShield;
         zombies = new List<GameObject>();
@@ -43,7 +44,7 @@ public class NecroMancerBehavior : MonoBehaviour {
         };
         necroMancerFunctionality.AssignTeleportLocations();
         player = GameObject.FindGameObjectWithTag("Player");
-        anim = GetComponent<Animator>();
+
         //rb = GetComponent<Rigidbody2D>();
         moveCon.Initialize(gameObject, anim);
        
@@ -55,7 +56,7 @@ public class NecroMancerBehavior : MonoBehaviour {
         NecroMancerManager.StartFirstBattle -= StartCastingShield;
     }
 
-    private void Start()
+    private void OnEnable()
     {
         if (canSubscribe)
         {
@@ -121,11 +122,13 @@ public class NecroMancerBehavior : MonoBehaviour {
         }    
     }
 
+    public GameObject MainShield;
     //these methods are for phase 1 of battle
     public void EndCastingShield()
     {
         audioSource.PlayOneShot(spawnShieldSound);
-        transform.GetChild(0).gameObject.SetActive(true);   //this recasts the main shield
+        Instantiate(MainShield, transform);
+        //transform.GetChild(0).gameObject.SetActive(true);   //this recasts the main shield
         GetComponent<CapsuleCollider2D>().enabled = false;   //this turns off the capsule collider so the necromancer cant get hit.
 
     }
@@ -133,6 +136,7 @@ public class NecroMancerBehavior : MonoBehaviour {
     //this will be run at the end of the animation;
     public void StartCastingShield()
     {
+        print("StartCastingShield");
         anim.SetTrigger("NecroCastShield");
     }
 
@@ -257,19 +261,25 @@ public class NecroMancerBehavior : MonoBehaviour {
 
     void ResetBattle()
     {
+        /*
         StopAllCoroutines();
-        Invoke("ResetNecro", 1.5f);
+        Invoke("ResetNecro", 1.5f);*/
     }
     void ResetNecro()
     {
+        necroMancerListener.Unsubscribe();
         GetComponent<SpriteRenderer>().enabled = true;
         necroMancerFunctionality.health = 6;
         transform.position = startingPos;
         anim.SetFloat("IdleStance", 0);
         anim.SetBool("IsMoving", false);
+        anim.SetTrigger("ReturnToIdle");
         MusicManager.instance.AreaTag = "MoutianInterior";
         this.enabled = false;
         necroMancerFunctionality.shield.SetActive(false);
+        canSubscribe = true;
+        canHit = false;
+        GetComponent<CapsuleCollider2D>().enabled = false;
     }
 }
 

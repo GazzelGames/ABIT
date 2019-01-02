@@ -11,7 +11,11 @@ public class NecroMancerDialogue : MonoBehaviour {
 
     public Vector3 movePlayerPoint;
     public bool introOver;
-    public GameObject summonedBlock;
+
+    private void OnEnable()
+    {
+        GetComponent<Animator>().SetBool("IsMoving", false);
+    }
 
     // Use this for initialization
     void Start()
@@ -24,28 +28,23 @@ public class NecroMancerDialogue : MonoBehaviour {
     private void OnApplicationQuit()
     {
         PlayerMangerListener.PlayerDead -= ResetDialogue;
+        NecroMancerManager.EndFirstBattle -= EndofFirstEncounter;
     }
 
     void ResetDialogue()
     {
-        Invoke("Restore", 1.5f);
+
+        //Invoke("Restore", 1.5f);
     }
 
     void Restore()
     {
         this.enabled = true;
         GetComponent<BoxCollider2D>().enabled = true;
-        summonedBlock.SetActive(false);
         NecroMancerManager.instance.FirstEncounter = false;
+        introOver = false;
     }
 
-    void OnDisable()
-    {
-        if (!gameObject.activeInHierarchy)
-        {
-            NecroMancerManager.EndFirstBattle -= EndofFirstEncounter;
-        }
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -59,7 +58,7 @@ public class NecroMancerDialogue : MonoBehaviour {
     IEnumerator StartIntroSpeech()
     {
         MusicManager.instance.AreaTag = "NecroIntro";
-        summonedBlock.SetActive(true);
+
         GetComponent<BoxCollider2D>().enabled = false;
         //Destroy(GetComponent<BoxCollider2D>());
         yield return new WaitUntil(() => CameraController.instance.targetReached);

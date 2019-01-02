@@ -10,7 +10,7 @@ public class DestroyWithPlayer : MonoBehaviour {
     
     void TimedDestroy()
     {
-        Destroy(gameObject, 1.1f);
+        Destroy(gameObject);
         PlayerMangerListener.PlayerDead -= TimedDestroy;
     }
 
