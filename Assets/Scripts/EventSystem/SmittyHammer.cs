@@ -13,6 +13,7 @@ public class SmittyHammer : MonoBehaviour {
 
     private void Start()
     {
+        PlayerMangerListener.instance.HasControl = false;
         player = GameObject.Find("Player");
         blacksmith = GameObject.Find("BlackSmith");
         transform.position = player.transform.position + new Vector3(0, 2, 0);
@@ -71,6 +72,7 @@ public class SmittyHammer : MonoBehaviour {
 
         PauseMenuManager.instance.EndQuestItem(questHammer);
         Destroy(gameObject, 0.5f);
+        PlayerMangerListener.instance.HasControl = true;
         yield return null;
     }
 
@@ -82,6 +84,7 @@ public class SmittyHammer : MonoBehaviour {
         //yield return DialogueManager.instance.SceneDialogue(nothingHappend);
         player.GetComponent<Animator>().SetBool("VictoryPose", false);
         Destroy(gameObject);
+        PlayerMangerListener.instance.HasControl = true;
         yield return null;
     }
 }

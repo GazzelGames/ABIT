@@ -76,6 +76,14 @@ public class SkeletonArcher : MonoBehaviour {
         }
     }
 
+    private void OnDestroy()
+    {
+        if (!canSubscribe)
+        {
+            archerListener.Unsubscribe();
+        }
+    }
+
     private void Start()
     {
         if (PlayerMangerListener.instance.StateOf == GameState.StateOfGame.GamePaused)

@@ -99,10 +99,22 @@ public class DialogueManager : MonoBehaviour {
                 {
                     if (everyOtherFrame||Input.GetKey(KeyCode.C))
                     {
-                        text.text += letters[letterIndex];
-                        letterIndex++;
-                        displayCharacter.PlayOneShot(displayCharacter.clip);
-                        everyOtherFrame = false;
+                        try
+                        {
+                            text.text += letters[letterIndex];
+                            text.text += letters[letterIndex+1];
+                            letterIndex += 2;
+                            displayCharacter.PlayOneShot(displayCharacter.clip);
+                            everyOtherFrame = false;
+                        }
+                        catch
+                        {
+                            text.text += letters[letterIndex];
+                            letterIndex++;
+                            displayCharacter.PlayOneShot(displayCharacter.clip);
+                            everyOtherFrame = false;
+                        }
+
                     }
                     else
                     {

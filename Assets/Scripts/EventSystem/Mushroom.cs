@@ -15,6 +15,7 @@ public class Mushroom : MonoBehaviour {
 
     private void Start()
     {
+        PlayerMangerListener.instance.HasControl = false;
         player = GameObject.Find("Player");
         witch = GameObject.Find("Enchantress");
         transform.position = player.transform.position + new Vector3(0, 2, 0);
@@ -23,10 +24,8 @@ public class Mushroom : MonoBehaviour {
 
         try
         {
-            if ((transform.position - witch.transform.position).magnitude < 6.5f)
+            if ((transform.position - witch.transform.position).magnitude < 8f)
             {
-                GetComponent<BoxCollider2D>().enabled = false;
-                print("this enters the scene");
                 player.GetComponent<Animator>().SetBool("VictoryPose", true);
                 Invoke("DisableRender", 1); //return player back to normal stance with the this invoke
                 StartCoroutine(GetShieldScene());
@@ -52,7 +51,6 @@ public class Mushroom : MonoBehaviour {
     {
         GetComponent<SpriteRenderer>().enabled = false;
         player.GetComponent<Animator>().SetBool("VictoryPose", false);
-        GetComponent<BoxCollider2D>().enabled = false;
     }
 
     IEnumerator GetShieldScene()
@@ -79,6 +77,7 @@ public class Mushroom : MonoBehaviour {
 
         PauseMenuManager.instance.EndQuestItem(questMushroom);
 
+        PlayerMangerListener.instance.HasControl = true;
         Destroy(gameObject, 0.5f);
         yield return null;
     }
@@ -92,6 +91,7 @@ public class Mushroom : MonoBehaviour {
         yield return new WaitUntil(() => DialogueManager.instance.enabled == false);
 
         player.GetComponent<Animator>().SetBool("VictoryPose", false);
+        PlayerMangerListener.instance.HasControl = true;
         Destroy(gameObject);
         yield return null;
     }

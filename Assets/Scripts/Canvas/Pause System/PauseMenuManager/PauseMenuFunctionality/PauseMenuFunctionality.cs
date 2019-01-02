@@ -7,7 +7,6 @@ using System.Collections;
 public class PauseMenuFunctionality : MonoBehaviour {
 
     public GameObject HUD;
-    private GameObject thisButton;
 
     public EventSystem eventSystem;
 
@@ -73,7 +72,7 @@ public class PauseMenuFunctionality : MonoBehaviour {
                 }
             }
         }
-        if (Input.GetKeyDown(KeyCode.Escape)&& PlayerMangerListener.instance.StateOf==GameState.StateOfGame.GamePaused)
+        if (Input.GetKeyDown(KeyCode.Escape)&& PlayerMangerListener.instance.StateOf==GameState.StateOfGame.GamePaused&&transitionDone)
         {
             ResumeGame();
         }

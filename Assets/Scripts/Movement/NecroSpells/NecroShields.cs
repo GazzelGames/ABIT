@@ -79,12 +79,14 @@ public class NecroShields : MonoBehaviour {
             shieldListener.Subscribe();
             canSubscribe = false;
             health = 2;
-            StartCoroutine(EmitParticles());
 
             quadReference = necroMancer.gameObject.GetComponent<NecroMancerBehavior>().necroMancerFunctionality.quad;
             gameObjects = new List<GameObject>();
             StartCoroutine(CreateList());
+            PlayerMangerListener.PlayerDead += ResetBattle;
         }
+        index = 0;
+        StartCoroutine(EmitParticles());
     }
 
     int index;
@@ -120,6 +122,7 @@ public class NecroShields : MonoBehaviour {
             yield return new WaitUntil(() => PlayerMangerListener.instance.StateOf==GameState.StateOfGame.GameListening);
             //yield return new WaitUntil(() => !PlayerMangerListener.instance.IsPaused);
             GameObject gameObj = Instantiate(preFab, randomPos, transform.rotation) as GameObject;
+            gameObj.AddComponent<DestroyWithPlayer>();
             gameObj.AddComponent<RemoveFromList>().InitializeVariables(gameObject);
             gameObjects.Add(gameObj);
             yield return new WaitForSeconds(1.5f);
@@ -131,7 +134,7 @@ public class NecroShields : MonoBehaviour {
     {
         gameObjects.Remove(objReference);
 
-        if (gameObjects.Count == 0)
+        if (gameObjects.Count == 0&&HudCanvas.instance.CurrentHP>0)
         {
             GetComponent<SpriteRenderer>().color = new Color(255, 230, 0);
             GetComponent<CircleCollider2D>().enabled = true;
@@ -151,7 +154,6 @@ public class NecroShields : MonoBehaviour {
     public IEnumerator DestroyParticles ()
     {
         gameObject.SetActive(false);
-        //GetComponent<SpriteRenderer>().enabled = false;
         transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().enabled = false;
         foreach (GameObject particle in particles)
         {
@@ -183,6 +185,23 @@ public class NecroShields : MonoBehaviour {
         {
             shieldListener.Unsubscribe();
             canSubscribe = true;
+        }
+    }
+
+    void ResetBattle()
+    {
+        TestFunction();
+        canSubscribe = true;
+        PlayerMangerListener.PlayerDead -= ResetBattle;
+    }
+
+    void TestFunction()
+    {
+        gameObject.SetActive(false);
+        transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        foreach (GameObject particle in particles)
+        {
+            Destroy(particle);
         }
     }
 }

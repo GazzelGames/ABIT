@@ -60,6 +60,13 @@ public class GreatSwordSkeleton : MonoBehaviour {
             canSubscribe = true;
         }
     }
+    private void OnDestroy()
+    {
+        if (!canSubscribe)
+        {
+            skeletonListener.Unsubscribe();
+        }
+    }
 
     // Update is called once per frame
     // update is going to constantly check the ray distance between the player and the obj.

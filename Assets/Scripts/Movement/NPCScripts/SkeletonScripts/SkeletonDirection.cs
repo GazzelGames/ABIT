@@ -57,6 +57,14 @@ public class SkeletonDirection : MonoBehaviour {
         }
     }
 
+    private void OnDestroy()
+    {
+        if (!canSubscribe)
+        {
+            skeletonListener.Unsubscribe();
+        }
+    }
+
     private void Start()
     {
         if (PlayerMangerListener.instance.StateOf == GameState.StateOfGame.GamePaused)
@@ -166,7 +174,6 @@ class SkeletonListener
     {
         PlayerMangerListener.GameStopped += GameStopped;
         PlayerMangerListener.GameResumed += GameResumed;
-
     }
 
     public void Unsubscribe()

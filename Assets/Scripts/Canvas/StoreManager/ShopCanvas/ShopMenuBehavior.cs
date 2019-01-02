@@ -108,7 +108,6 @@ public class ShopMenuBehavior: MonoBehaviour {
 
     private void OnEnable()
     {
-        PlayerMangerListener.instance.StateOf = GameState.StateOfGame.PlayerShopping;
         audioSource.volume = GameManager.instance.VolumeModifier;
         element = 0;
         statmentRunning = false;
