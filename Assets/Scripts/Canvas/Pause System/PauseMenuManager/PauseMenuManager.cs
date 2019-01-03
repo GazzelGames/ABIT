@@ -148,7 +148,7 @@ public class PauseMenuManager : MonoBehaviour {
         }
     }
 
-
+    /*
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -171,5 +171,5 @@ public class PauseMenuManager : MonoBehaviour {
         {
             ChangeEquipmentItem(2, sword);
         }
-    }
+    }*/
 }
