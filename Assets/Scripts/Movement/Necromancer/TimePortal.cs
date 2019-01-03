@@ -43,8 +43,7 @@ public class TimePortal : MonoBehaviour {
         player.transform.parent = gameObject.transform;
         //suck 
 
-        //this will fade in the fader
-        HudCanvas.instance.FadeInFader();
+        Invoke("Invoke", 1f);
 
         Vector3 length = transform.position - player.transform.position;
         while (player.transform.localScale.x > 0.5f)
@@ -65,4 +64,9 @@ public class TimePortal : MonoBehaviour {
         yield return null;
     }
 
+    void Invoke()
+    {
+        //this will fade in the fader
+        HudCanvas.instance.FadeInFader();
+    }
 }

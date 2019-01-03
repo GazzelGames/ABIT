@@ -14,6 +14,8 @@ public class IceSpellScript : MonoBehaviour {
 
     private void Start()
     {
+        PlayerMangerListener.instance.HasControl = false;
+        Invoke("Invoke", 0.5f);
         parent = transform.parent.gameObject;
         transform.parent = null;
         StartCoroutine(ScaleMist());
@@ -24,6 +26,11 @@ public class IceSpellScript : MonoBehaviour {
             DecideOrientation();
         }
 
+    }
+
+    void Invoke()
+    {
+        PlayerMangerListener.instance.HasControl = true;
     }
 
     void DecideOrientation()

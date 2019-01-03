@@ -157,6 +157,7 @@ public class EnemyCombatListener : MonoBehaviour {
         {
             case "FireBall":
                 {
+                    HP = hp - 1;
                     OnFire = true;
                     knockBack(collision.gameObject.transform.position);
                     Destroy(collision.gameObject);
@@ -164,6 +165,7 @@ public class EnemyCombatListener : MonoBehaviour {
                 }
             case "IceSpell":
                 {
+                    HP = hp - 1;
                     //this happens when the character is hit by ice
                     Frozen = true;
                     break;
@@ -184,7 +186,7 @@ public class EnemyCombatListener : MonoBehaviour {
                 }
             case "Fire":
                 {
-                    OnFire = true;
+                    //OnFire = true;
                     break;
                 }
         }
