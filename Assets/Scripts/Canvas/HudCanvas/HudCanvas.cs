@@ -88,12 +88,7 @@ public class HudCanvas : MonoBehaviour {
     bool metersRunning;
     IEnumerator IncreaseMagikMeter()
     {
-        while (currentMagic < maxMagic)
-        {
-            currentMagic += 1f;
-            magikSlider.value = currentMagic;
-            yield return null;
-        }
+
         metersRunning = false;
         yield return null;
     }
@@ -311,6 +306,12 @@ public class HudCanvas : MonoBehaviour {
         else if (eventSystem.currentSelectedGameObject != priviousButton)
         {
             priviousButton = eventSystem.currentSelectedGameObject;
+        }
+
+        if (currentMagic < maxMagic)
+        {
+            currentMagic += 0.35f;
+            magikSlider.value = currentMagic;
         }
     }
 

@@ -2,15 +2,15 @@
 
 public class RestartNecroBattle : MonoBehaviour {
 
-    public Transform necroBoss;
+    public Transform necroBossTransform;
     public GameObject aliveObj;
     public GameObject reference;
     Vector3 referenceStartPos;
     private void Awake()
     {
         //reference = necroBoss;
-        referenceStartPos = necroBoss.position;
-        GameObject necro = Instantiate(reference, necroBoss);
+        referenceStartPos = necroBossTransform.position;
+        GameObject necro = Instantiate(reference, necroBossTransform);
         aliveObj = necro;
         
         necro.transform.position = referenceStartPos;
@@ -45,7 +45,7 @@ public class RestartNecroBattle : MonoBehaviour {
     void Restart()
     {
         Destroy(aliveObj);
-        GameObject necro = Instantiate(reference,necroBoss);
+        GameObject necro = Instantiate(reference,necroBossTransform);
         aliveObj = necro;
         necro.transform.position = referenceStartPos;
     }

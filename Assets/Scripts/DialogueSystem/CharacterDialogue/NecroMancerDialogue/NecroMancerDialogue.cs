@@ -20,6 +20,7 @@ public class NecroMancerDialogue : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        portal = transform.parent.parent.gameObject.transform.GetChild(0).gameObject;
         PlayerMangerListener.PlayerDead += ResetDialogue;
         NecroMancerManager.EndFirstBattle += EndofFirstEncounter;
         movePlayerPoint = new Vector3(transform.position.x, transform.position.y - 4f, 0);
@@ -33,7 +34,7 @@ public class NecroMancerDialogue : MonoBehaviour {
 
     void ResetDialogue()
     {
-
+        OnApplicationQuit();
         //Invoke("Restore", 1.5f);
     }
 
@@ -48,13 +49,15 @@ public class NecroMancerDialogue : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player"&& PlayerMangerListener.instance.StateOf == GameState.StateOfGame.GameListening)
+        if (collision.gameObject.name == "Player" && PlayerMangerListener.instance.StateOf == GameState.StateOfGame.GameListening)
         {
             PlayerMangerListener.instance.HasControl = false;
-            CameraController.instance.GoToTransformPosition(transform.position);           
+            CameraController.instance.GoToTransformPosition(transform.position);
             StartCoroutine(StartIntroSpeech());
+            //EndofFirstEncounter();
         }
     }
+
     IEnumerator StartIntroSpeech()
     {
         MusicManager.instance.AreaTag = "NecroIntro";
@@ -67,19 +70,26 @@ public class NecroMancerDialogue : MonoBehaviour {
         {
             DialogueManager.instance.StartTalking(alteredIntro);
         }
-        else{
+        else {
             DialogueManager.instance.StartTalking(intro);
         }
 
-        yield return new WaitUntil(() => PlayerMangerListener.instance.StateOf==GameState.StateOfGame.GameListening);
+        yield return new WaitUntil(() => PlayerMangerListener.instance.StateOf == GameState.StateOfGame.GameListening);
         CameraController.instance.followPlayer = true;
         NecroMancerManager.instance.FirstEncounter = true;
         PlayerMangerListener.instance.HasControl = true;
         introOver = true;
 
         MusicManager.instance.AreaTag = "NecroBattle";
+        Invoke("StopCoroutines", 0.25f);
+        yield return null;
 
         //GetComponent<NecroMancerDialogue>().enabled = false;
+    }
+
+    void StopCoroutines()
+    {
+        StopAllCoroutines();
     }
 
     void EndofFirstEncounter()

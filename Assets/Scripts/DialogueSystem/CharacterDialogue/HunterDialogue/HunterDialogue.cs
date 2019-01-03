@@ -207,11 +207,8 @@ public class HunterDialogue : MonoBehaviour {
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(PlayerDialogueTransmitter.instance.objectReference == gameObject)
-        {
-            PlayerDialogueTransmitter.instance.objectReference = null;
-            DialogueManager.instance.ClearText();
-        }
+        PlayerDialogueTransmitter.instance.objectReference = null;
+        DialogueManager.instance.ClearText();
     }
 
     private void OnTriggerStay2D(Collider2D collision)

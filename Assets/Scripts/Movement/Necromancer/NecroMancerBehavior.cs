@@ -28,26 +28,32 @@ public class NecroMancerBehavior : MonoBehaviour {
     public bool canHit;
     private void Awake()
     {
-        //anim = GetComponent<Animator>();
+        startingPos = GameObject.Find("MoutianTop").gameObject.GetComponent<RestartNecroBattle>().necroBossTransform.position;
+        anim = GetComponent<Animator>();
         PlayerMangerListener.PlayerDead += ResetBattle;
         NecroMancerManager.StartFirstBattle += StartCastingShield;
         zombies = new List<GameObject>();
         audioSource = GetComponent<AudioSource>();
         necroMancerListener = new NecroMancerListener();
         necroMancerListener.SetReferences(this, GetComponent<CapsuleCollider2D>(), GetComponent<Animator>());
-        startingPos = transform.position;
+
         canHit = false;
-        necroMancerFunctionality.DeclareQuad(transform.position);
+        necroMancerFunctionality.DeclareQuad(GameObject.Find("MoutianTop").gameObject.GetComponent<RestartNecroBattle>().necroBossTransform.position);
         moveCon = new MovementController2
         {
             movementSpeed = 6
         };
-        necroMancerFunctionality.AssignTeleportLocations();
+
         player = GameObject.FindGameObjectWithTag("Player");
 
         //rb = GetComponent<Rigidbody2D>();
         moveCon.Initialize(gameObject, anim);
-       
+        necroMancerFunctionality.AssignTeleportLocations();
+    }
+
+    private void Start()
+    {
+
     }
 
     private void OnApplicationQuit()
@@ -67,10 +73,15 @@ public class NecroMancerBehavior : MonoBehaviour {
 
     private void OnDisable()
     {
-        if (NecroMancerManager.instance.FirstEncounterDone)
-        {
-            necroMancerListener.Unsubscribe();
-        }
+        necroMancerListener.Unsubscribe();
+        PlayerMangerListener.PlayerDead -= ResetBattle;
+        NecroMancerManager.StartFirstBattle -= StartCastingShield;
+    }
+
+    private void OnDestroy()
+    {
+        PlayerMangerListener.PlayerDead -= ResetBattle;
+        NecroMancerManager.StartFirstBattle -= StartCastingShield;
     }
 
     private void Update()
@@ -137,7 +148,7 @@ public class NecroMancerBehavior : MonoBehaviour {
     public void StartCastingShield()
     {
         print("StartCastingShield");
-        anim.SetTrigger("NecroCastShield");
+        GetComponent<Animator>().SetTrigger("NecroCastShield");
     }
 
     //this is phase1 process just 
