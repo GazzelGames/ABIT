@@ -12,7 +12,7 @@ public class WorldManager : MonoBehaviour {
         }
         else
         {
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 

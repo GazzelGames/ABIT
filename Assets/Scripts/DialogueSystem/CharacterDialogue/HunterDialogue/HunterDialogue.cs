@@ -114,6 +114,8 @@ public class HunterDialogue : MonoBehaviour {
                 print("Parent is null");
                 parentHunter.transform.parent.gameObject.GetComponent<WorldSectionTrigger>().areaObjects.Remove(parentHunter);
                 showPlayerPoint = false;
+                SetAnimator(0, 0);
+                anim.enabled = false;
                 GetComponent<HunterDialogue>().enabled = false;
                 GetComponent<BoxCollider2D>().enabled = true;
             }

@@ -68,6 +68,7 @@ public class IceSpellScript : MonoBehaviour {
 
     private void OnDestroy()
     {
+        Invoke();
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
         gameObject.transform.localScale = new Vector3(1, 1, 1);
     }

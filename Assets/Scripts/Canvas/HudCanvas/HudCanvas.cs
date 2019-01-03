@@ -78,20 +78,9 @@ public class HudCanvas : MonoBehaviour {
         set
         {
             currentMagic = value;
-            if (!metersRunning)
-            {
-                metersRunning = true;
-                StartCoroutine(IncreaseMagikMeter());
-            }
         }
     }
     bool metersRunning;
-    IEnumerator IncreaseMagikMeter()
-    {
-
-        metersRunning = false;
-        yield return null;
-    }
 
     public Sprite[] heartSprites;
     public List<GameObject> hearts;
@@ -280,16 +269,16 @@ public class HudCanvas : MonoBehaviour {
     {
         if (var == null&&PlayerMangerListener.instance.HasControl)
         {
-            if (Input.GetKeyDown(KeyCode.Keypad1) && equippedItems[0] != null&&magicValue[0]<CurrentMagic)
+            if ((Input.GetKeyDown(KeyCode.Keypad1)|| Input.GetKeyDown(KeyCode.I)) && equippedItems[0] != null&&magicValue[0]<CurrentMagic)
             {
                 CreateGameObject(equippedItems[0]);
                 CurrentMagic = CurrentMagic - magicValue[0];
-            }else if(Input.GetKeyDown(KeyCode.Keypad2) && equippedItems[1] != null && magicValue[1] < CurrentMagic)
+            }else if ((Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.O)) && equippedItems[1] != null && magicValue[1] < CurrentMagic)
             {
                 CreateGameObject(equippedItems[1]);
                 CurrentMagic = CurrentMagic - magicValue[1];
             }
-            else if (Input.GetKeyDown(KeyCode.Keypad3) && equippedItems[2] != null && magicValue[2] < CurrentMagic)
+            else if ((Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.P)) && equippedItems[2] != null && magicValue[2] < CurrentMagic)
             {
                 CreateGameObject(equippedItems[2]);
                 CurrentMagic = CurrentMagic - magicValue[2];
