@@ -30,7 +30,6 @@ public class NecroMancerBehavior : MonoBehaviour {
     {
         startingPos = GameObject.Find("MoutianTop").gameObject.GetComponent<RestartNecroBattle>().necroBossTransform.position;
         anim = GetComponent<Animator>();
-        PlayerMangerListener.PlayerDead += ResetBattle;
         NecroMancerManager.StartFirstBattle += StartCastingShield;
         zombies = new List<GameObject>();
         audioSource = GetComponent<AudioSource>();
@@ -51,14 +50,8 @@ public class NecroMancerBehavior : MonoBehaviour {
         necroMancerFunctionality.AssignTeleportLocations();
     }
 
-    private void Start()
-    {
-
-    }
-
     private void OnApplicationQuit()
     {
-        PlayerMangerListener.PlayerDead -= ResetBattle;
         NecroMancerManager.StartFirstBattle -= StartCastingShield;
     }
 
@@ -74,13 +67,11 @@ public class NecroMancerBehavior : MonoBehaviour {
     private void OnDisable()
     {
         necroMancerListener.Unsubscribe();
-        PlayerMangerListener.PlayerDead -= ResetBattle;
         NecroMancerManager.StartFirstBattle -= StartCastingShield;
     }
 
     private void OnDestroy()
     {
-        PlayerMangerListener.PlayerDead -= ResetBattle;
         NecroMancerManager.StartFirstBattle -= StartCastingShield;
     }
 
@@ -268,29 +259,6 @@ public class NecroMancerBehavior : MonoBehaviour {
     private void ResetAttacking()
     {
         anim.SetBool("Attacking", false);
-    }
-
-    void ResetBattle()
-    {
-        /*
-        StopAllCoroutines();
-        Invoke("ResetNecro", 1.5f);*/
-    }
-    void ResetNecro()
-    {
-        necroMancerListener.Unsubscribe();
-        GetComponent<SpriteRenderer>().enabled = true;
-        necroMancerFunctionality.health = 6;
-        transform.position = startingPos;
-        anim.SetFloat("IdleStance", 0);
-        anim.SetBool("IsMoving", false);
-        anim.SetTrigger("ReturnToIdle");
-        MusicManager.instance.AreaTag = "MoutianInterior";
-        this.enabled = false;
-        necroMancerFunctionality.shield.SetActive(false);
-        canSubscribe = true;
-        canHit = false;
-        GetComponent<CapsuleCollider2D>().enabled = false;
     }
 }
 

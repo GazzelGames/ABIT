@@ -113,7 +113,6 @@ public class NecroMancerDialogue : MonoBehaviour {
 
         portal.SetActive(true);
         GetComponent<Animator>().SetTrigger("NecroHit");
-        CameraController.instance.GoToTransformPosition(portal.transform.position);
         yield return null;
     }
 }

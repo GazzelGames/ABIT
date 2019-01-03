@@ -21,18 +21,26 @@ public class ShieldParticles : MonoBehaviour {
 
     private void Update()
     {
-        distanceToEnd = (transform.position - end.transform.position).magnitude;
-
-        Vector3 test = end.transform.position - startingPoint;
-
-        test.Normalize();
-
-        transform.Translate((test)*Time.deltaTime*10);
-
-        if (distanceToEnd < 1f)
+        if (end)
         {
-            gameObject.SetActive(false);
+            distanceToEnd = (transform.position - end.transform.position).magnitude;
+
+            Vector3 test = end.transform.position - startingPoint;
+
+            test.Normalize();
+
+            transform.Translate((test) * Time.deltaTime * 10);
+
+            if (distanceToEnd < 1f)
+            {
+                gameObject.SetActive(false);
+            }
         }
+        else
+        {
+            Destroy(gameObject);
+        }
+
     }
 
 }
