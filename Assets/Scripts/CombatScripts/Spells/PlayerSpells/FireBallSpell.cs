@@ -13,6 +13,7 @@ public class FireBallSpell : MonoBehaviour {
     public int damage;
     private void Start()
     {
+       PlayerMangerListener.instance.HasControl = false;
        parent = transform.parent.gameObject;
        transform.parent = null;
        rb = GetComponent<Rigidbody2D>();
@@ -20,13 +21,12 @@ public class FireBallSpell : MonoBehaviour {
        {
             DecideOrientation();
        }
-       else
-       {
-            //stuff
-       }
-
     }
 
+    void Invoke()
+    {
+        PlayerMangerListener.instance.HasControl = true;
+    }
     void DecideOrientation()
     {
         float f = parent.GetComponent<Animator>().GetFloat("IdleStance");

@@ -92,7 +92,7 @@ public class PlayerMangerListener : MonoBehaviour
         gameObject.transform.position = GameObject.Find("BeginningDialogue").transform.position;
         pauseCanvas = GameObject.Find("AllCanvases").transform.GetChild(4).gameObject;      // you cannont find an object if it is already disabled but you can find its parent and get the object through that
         PlayerInvincible = InScene = false;
-        HasSword = true;
+        HasSword = false;
         HasControl = true;
         CreateSingleton();
     }
