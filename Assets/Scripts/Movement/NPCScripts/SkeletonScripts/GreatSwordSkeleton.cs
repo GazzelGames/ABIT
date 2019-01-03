@@ -6,8 +6,8 @@ public class GreatSwordSkeleton : MonoBehaviour {
     Vector3 startingPos;
     // MovementController moveCon;
     public MovementController2 moveCon;
-    PlayerInRange playerInRange;
-    EnemyCombatListener combatListener;
+    public PlayerInRange playerInRange;
+    public EnemyCombatListener combatListener;
     GreatSkeletonListener skeletonListener;
     bool canSubscribe;
     Animator anim;
@@ -35,7 +35,7 @@ public class GreatSwordSkeleton : MonoBehaviour {
 
     void DelayEnabled()
     {
-        GetComponent<Animator>().enabled = false;
+        GetComponent<Animator>().enabled = true;
         if (canSubscribe)
         {
             skeletonListener.Subscribe();
@@ -83,10 +83,11 @@ public class GreatSwordSkeleton : MonoBehaviour {
         if (hit)
         {
             test = hit.collider.name;
-            if (test == "Player" && hit.distance < 1.5f)
+            if (test == "Player" && hit.distance <3f)
             {
                 anim.SetBool("SwingSword", true);
                 moveCon.movementSpeed = 0;
+                moveCon.Movement = Vector3.zero;
             }
             if (test == "Player" && hit.distance < 6f)
             {
@@ -98,20 +99,23 @@ public class GreatSwordSkeleton : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        if (playerInRange.playerInRange)
+        if(moveCon.movementSpeed != 0)
         {
-            moveCon.Movement = player.transform.position - transform.position;
-            moveCon.MoveNPC();
-        }
-        else
-        {
-            if ((transform.position - startingPos).magnitude > 0.5)
+            if (playerInRange.playerInRange)
             {
-                moveCon.Movement = startingPos - transform.position;
+                moveCon.Movement = player.transform.position - transform.position;
                 moveCon.MoveNPC();
             }
-
+            else
+            {
+                if ((transform.position - startingPos).magnitude > 0.5)
+                {
+                    moveCon.Movement = startingPos - transform.position;
+                    moveCon.MoveNPC();
+                }
+            }
         }
+
     }
 
     void ResetSwordSwing()

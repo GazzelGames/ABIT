@@ -5,14 +5,9 @@ public class ShieldSpell : MonoBehaviour {
 
     private KeyCode keyBind;
 
-    public void SetKeyCode(KeyCode newKeyCode)
-    {
-        keyBind = newKeyCode;
-    }
-
     private void OnEnable()
     {
-        decideKeyBind();
+        DecideKeyBind();
         PlayerMangerListener.instance.HasControl = false;
         StartCoroutine(RunShield());
     }
@@ -29,7 +24,7 @@ public class ShieldSpell : MonoBehaviour {
         Destroy(gameObject);
     }
 
-    void decideKeyBind()
+    void DecideKeyBind()
     {
         if (Input.GetKey(KeyCode.Keypad1))
         {

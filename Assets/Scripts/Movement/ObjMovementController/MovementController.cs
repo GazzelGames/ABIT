@@ -27,19 +27,19 @@ public class MovementController2
     //this continlly checks the movement of the character to determine 
     public void SetIdleStance()
     {        
-        if (movement.x > 0.1)
+        if (movement.x > 0.2)
         {
             anim.SetFloat("IdleStance", 2);
         }
-        else if (movement.x < -0.1)
+        else if (movement.x < -0.2)
         {
             anim.SetFloat("IdleStance", 1);
         }
-        else if (movement.y > 0.1)
+        else if (movement.y > 0.2)
         {
             anim.SetFloat("IdleStance", 3);
         }
-        else if (movement.y < -0.1)
+        else if (movement.y < -0.2)
         {
             anim.SetFloat("IdleStance", 0);
         }

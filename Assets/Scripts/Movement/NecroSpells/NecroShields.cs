@@ -12,7 +12,7 @@ public class NecroShields : MonoBehaviour {
     public GameObject particle;
     public GameObject parent;
 
-    Transform necroMancer;     //necroMancer Gameobject Reference all I want is the transform
+    public Transform necroMancer;     //necroMancer Gameobject Reference all I want is the transform
     ShieldListener shieldListener;
     
     //how many sword swings it takes to destroy shield
@@ -89,8 +89,9 @@ public class NecroShields : MonoBehaviour {
             quadReference = necroMancer.gameObject.GetComponent<NecroMancerBehavior>().necroMancerFunctionality.quad;
             gameObjects = new List<GameObject>();
             StartCoroutine(CreateList());
-            PlayerMangerListener.PlayerDead += ResetBattle;
+
         }
+        PlayerMangerListener.PlayerDead += ResetBattle;
         index = 0;
         StartCoroutine(EmitParticles());
     }
@@ -123,7 +124,7 @@ public class NecroShields : MonoBehaviour {
                 x = randomPos.x;
                 y = randomPos.y;
                 //this is the quad
-                randomPos = new Vector3(Random.Range(quadReference[2].x+3, quadReference[3].x-3), Random.Range(quadReference[0].y-3, quadReference[1].y+3), 0);
+                randomPos = new Vector3(Random.Range(necroMancer.position.x+5, necroMancer.position.x-5), Random.Range(necroMancer.position.y-5, necroMancer.position.y+5), 0);
             } while (x == randomPos.x || randomPos.y == y);
             yield return new WaitUntil(() => PlayerMangerListener.instance.StateOf==GameState.StateOfGame.GameListening);
             //yield return new WaitUntil(() => !PlayerMangerListener.instance.IsPaused);
@@ -190,9 +191,11 @@ public class NecroShields : MonoBehaviour {
         }
         if (!gameObject.activeInHierarchy)
         {
+
             shieldListener.Unsubscribe();
             canSubscribe = true;
         }
+        PlayerMangerListener.PlayerDead -= ResetBattle;
     }
 
     public void ResetBattle()
@@ -207,9 +210,6 @@ public class NecroShields : MonoBehaviour {
         particles = new List<GameObject>();
         shieldListener.Unsubscribe();
         Destroy(gameObject);
-        //TestFunction();
-        //canSubscribe = true;
-       // PlayerMangerListener.PlayerDead -= ResetBattle;*/
     }
 
     void TestFunction()

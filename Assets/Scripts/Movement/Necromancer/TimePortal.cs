@@ -7,8 +7,8 @@ public class TimePortal : MonoBehaviour {
     GameObject player;
 
 	// Use this for initialization
-	void Start () {
-        necromancer = GameObject.Find("NecroMancer");
+	void OnEnable() {
+        necromancer = GameObject.Find("NecroMancer(Clone)");
         player = PlayerController.instance.gameObject;
         CameraController.instance.GoToTransformPosition(transform.position);
         CameraController.instance.followPlayer = false;

@@ -16,7 +16,6 @@ public class WorldManager : MonoBehaviour {
         }
     }
 
-    //public WorldStateEnum worldState = WorldStateEnum.beginning;
     public WorldStateEnum worldState;
 
     private void Awake()

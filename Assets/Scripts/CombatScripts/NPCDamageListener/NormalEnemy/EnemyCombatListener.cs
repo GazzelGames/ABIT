@@ -179,7 +179,6 @@ public class EnemyCombatListener : MonoBehaviour {
                     {
                         HP = hp - PauseMenuManager.instance.SwordDamage();
                     }
-
                     knockBack(collision.gameObject.transform.position);
                     break;
                 }
