@@ -14,6 +14,7 @@ public class FireBallSpell : MonoBehaviour {
     private void Start()
     {
        PlayerMangerListener.instance.HasControl = false;
+       Invoke("Invoke", 0.5f);
        parent = transform.parent.gameObject;
        transform.parent = null;
        rb = GetComponent<Rigidbody2D>();
@@ -21,6 +22,10 @@ public class FireBallSpell : MonoBehaviour {
        {
             DecideOrientation();
        }
+    }
+    private void OnDestroy()
+    {
+        Invoke();
     }
 
     void Invoke()

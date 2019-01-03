@@ -58,15 +58,15 @@ public class PauseMenuFunctionality : MonoBehaviour {
             name = tempObj.transform.parent.parent.name;
             if (transitionDone && (name =="ItemPanel"||name=="QuestItems"))
             {
-                if (Input.GetKey(KeyCode.Keypad1))
+                if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.I))
                 {
                     StartCoroutine(MoveImageToButton(eventSystem.currentSelectedGameObject, 0, name));
                 }
-                else if (Input.GetKey(KeyCode.Keypad2))
+                else if (Input.GetKeyDown(KeyCode.Keypad2) || Input.GetKeyDown(KeyCode.O))
                 {
                     StartCoroutine(MoveImageToButton(eventSystem.currentSelectedGameObject, 1,name));
                 }
-                else if (Input.GetKey(KeyCode.Keypad3))
+                else if (Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.P))
                 {
                     StartCoroutine(MoveImageToButton(eventSystem.currentSelectedGameObject, 2,name));
                 }
