@@ -116,11 +116,7 @@ public class GenericDialogue : MonoBehaviour {
                 stance = 3;
             }
         }
-
-        if (anim)
-        {
-            anim.SetFloat("IdleStance", stance);
-        }
+        anim.SetFloat("IdleStance", stance);
 
     }
 }

@@ -69,6 +69,8 @@ public class HudCanvas : MonoBehaviour {
     public float currentMagic;
     public int maxMagic = 100;
     public int MaxMagic{get{ return maxMagic; }set { maxMagic = value;}}
+    [HideInInspector]
+    public bool magicDrain;
     public float CurrentMagic
     {
         get
@@ -230,7 +232,7 @@ public class HudCanvas : MonoBehaviour {
         Invoke("FadeInFader", 0.5f);
         Invoke("MovePlayerToDoor", 2f);
         player.GetComponent<Collider2D>().enabled = false;
-        Invoke("FadeOutFader", 1.5f);
+        Invoke("FadeOutFader", 2.5f);
     }
 
     void MovePlayerToDoor()
@@ -278,7 +280,7 @@ public class HudCanvas : MonoBehaviour {
                 CreateGameObject(equippedItems[1]);
                 CurrentMagic = CurrentMagic - magicValue[1];
             }
-            else if ((Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.P)) && equippedItems[2] != null && magicValue[2] < CurrentMagic)
+            else if ((Input.GetKeyDown(KeyCode.Keypad3) || Input.GetKeyDown(KeyCode.P)) && equippedItems[2] != null && magicValue[2] < CurrentMagic)
             {
                 CreateGameObject(equippedItems[2]);
                 CurrentMagic = CurrentMagic - magicValue[2];
@@ -286,6 +288,7 @@ public class HudCanvas : MonoBehaviour {
         }
     }
 
+    public float magicDrainValue = 0;
     private void LateUpdate()
     {
         if (eventSystem.currentSelectedGameObject == null)
@@ -297,7 +300,12 @@ public class HudCanvas : MonoBehaviour {
             priviousButton = eventSystem.currentSelectedGameObject;
         }
 
-        if (currentMagic < maxMagic)
+        if (magicDrain)
+        {
+            currentMagic -= 0.35f;
+            magikSlider.value = currentMagic;
+        }
+        else if (currentMagic < maxMagic)
         {
             currentMagic += 0.35f;
             magikSlider.value = currentMagic;

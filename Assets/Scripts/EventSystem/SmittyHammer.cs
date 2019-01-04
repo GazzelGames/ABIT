@@ -26,6 +26,7 @@ public class SmittyHammer : MonoBehaviour {
                 GetComponent<BoxCollider2D>().enabled = false;
                 Invoke("DisableRender", 1); //return player back to normal stance with the this invoke
                 StartCoroutine(NewHammerScene());
+                SetTalkingStance();
                 if (blacksmith.transform.GetChild(0).gameObject.GetComponent<BlackSmithDialogue>())
                 {
                     blacksmith.transform.GetChild(0).gameObject.GetComponent<BlackSmithDialogue>().hammerRecieved = true;
@@ -86,5 +87,43 @@ public class SmittyHammer : MonoBehaviour {
         Destroy(gameObject);
         PlayerMangerListener.instance.HasControl = true;
         yield return null;
+    }
+
+    public void SetTalkingStance()
+    {
+        Vector3 displacement = blacksmith.transform.position - player.transform.position;
+        float x = displacement.x;
+        float y = displacement.y;
+        float stance = 0;
+        float playerStance = 0;
+
+        if (Mathf.Abs(x) > Mathf.Abs(y))
+        {
+            if (x > 0)
+            {
+                stance = 1;
+                playerStance = 2;
+            }
+            else
+            {
+                stance = 2;
+                playerStance = 1;
+            }
+        }
+        else
+        {
+            if (y > 0)
+            {
+                stance = 0;
+                playerStance = 3;
+            }
+            else
+            {
+                stance = 3;
+                playerStance = 0;
+            }
+        }
+        player.GetComponent<Animator>().SetFloat("IdleStance", playerStance);
+        blacksmith.GetComponent<Animator>().SetFloat("IdleStance", stance);
     }
 }

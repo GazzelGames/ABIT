@@ -75,7 +75,7 @@ public class GreatSwordSkeleton : MonoBehaviour {
         Vector2 currentPos = new Vector2(transform.position.x, transform.position.y);
         Vector2 rayDirection = new Vector2(player.transform.position.x - currentPos.x, player.transform.position.y- currentPos.y);
         //debug draw ray is vector 3s only
-        Debug.DrawRay(transform.position, rayDirection, Color.red, 0.01f);
+        //Debug.DrawRay(transform.position, rayDirection, Color.red, 0.01f);
         //physic2d can only use 2d stuff;
 
         RaycastHit2D hit = Physics2D.Raycast(currentPos, rayDirection);
@@ -113,9 +113,15 @@ public class GreatSwordSkeleton : MonoBehaviour {
                     moveCon.Movement = startingPos - transform.position;
                     moveCon.MoveNPC();
                 }
+                else
+                {
+
+                    moveCon.Movement = Vector3.zero;
+                    moveCon.anim.SetFloat("IdleStance", 0f);
+                    moveCon.anim.SetBool("IsMoving", false);
+                }
             }
         }
-
     }
 
     void ResetSwordSwing()

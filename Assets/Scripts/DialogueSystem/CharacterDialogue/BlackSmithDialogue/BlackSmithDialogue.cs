@@ -123,7 +123,7 @@ public class BlackSmithDialogue : MonoBehaviour {
     }
 
     Animator anim;
-    private void SetTalkingStance()
+    public void SetTalkingStance()
     {
         Vector3 displacement = gameObject.transform.parent.position - player.transform.position;
         float x = displacement.x;

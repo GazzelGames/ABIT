@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GirlsMovement : MonoBehaviour {
 
@@ -84,6 +82,16 @@ public class GirlsMovement : MonoBehaviour {
         float randomY = Random.Range(-range, range);
         destinationPoint = new Vector3(startingPoint.x + randomX, startingPoint.y + randomY, 0);
         moveCon.Movement = destinationPoint - transform.position;
+    }
+
+    private Vector2 hitPoint;
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        foreach (ContactPoint2D contact in collision.contacts)
+        {
+            hitPoint = contact.point;
+            moveCon.Movement = transform.position - new Vector3(hitPoint.x, hitPoint.y, 0);
+        }
     }
 }
 
