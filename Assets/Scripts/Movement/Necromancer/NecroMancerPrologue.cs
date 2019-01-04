@@ -27,21 +27,21 @@ public class NecroMancerPrologue : MonoBehaviour {
 
     private void OnEnable()
     {
-        GetComponent<Animator>().enabled = true;
         if (canSubscribe)
         {
             listener.Subscribe();
+            GetComponent<Animator>().enabled = true;
             canSubscribe = false;
         }
     }
 
     private void OnDisable()
     {
-        GetComponent<Animator>().enabled = false;
         if (gameObject.activeInHierarchy == false)
         {
             listener.Unsubscribe();
             canSubscribe = true;
+            GetComponent<Animator>().enabled = false;
         }
     }
 

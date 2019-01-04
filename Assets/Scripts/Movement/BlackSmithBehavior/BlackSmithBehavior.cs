@@ -24,10 +24,10 @@ public class BlackSmithBehavior : MonoBehaviour {
 
     private void OnEnable()
     {
-        anim.enabled = true;
         anim.SetBool("IsMoving",true);
         if (canSubscribe)
         {
+            anim.enabled = true;
             smithListener.Subscribe();
             canSubscribe = false;
         }
@@ -37,6 +37,7 @@ public class BlackSmithBehavior : MonoBehaviour {
         anim.SetBool("IsMoving", false);
         if (!gameObject.activeInHierarchy)
         {
+            anim.enabled=false;
             smithListener.Unsubscribe();
             canSubscribe = true;
         }
@@ -69,12 +70,12 @@ public class BlackSmithBehavior : MonoBehaviour {
             if (patrolIndex == 0)
             {
                 patrolIndex++;
-                moveCon.Movement = Vector3.left;
+                //moveCon.Movement = Vector3.left;
             }
             else
             {
                 patrolIndex--;
-                moveCon.Movement = Vector3.right;
+                //moveCon.Movement = Vector3.right;
             }
 
         }

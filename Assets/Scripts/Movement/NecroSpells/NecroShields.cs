@@ -124,7 +124,7 @@ public class NecroShields : MonoBehaviour {
                 x = randomPos.x;
                 y = randomPos.y;
                 //this is the quad
-                randomPos = new Vector3(Random.Range(necroMancer.position.x+5, necroMancer.position.x-5), Random.Range(necroMancer.position.y-5, necroMancer.position.y+5), 0);
+                randomPos = new Vector3(Random.Range(necroMancer.position.x+7, necroMancer.position.x-7), Random.Range(necroMancer.position.y-7, necroMancer.position.y+7), 0);
             } while (x == randomPos.x || randomPos.y == y);
             yield return new WaitUntil(() => PlayerMangerListener.instance.StateOf==GameState.StateOfGame.GameListening);
             //yield return new WaitUntil(() => !PlayerMangerListener.instance.IsPaused);

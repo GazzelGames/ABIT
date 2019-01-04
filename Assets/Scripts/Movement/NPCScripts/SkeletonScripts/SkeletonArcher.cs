@@ -96,69 +96,60 @@ public class SkeletonArcher : MonoBehaviour {
 
     private void Update()
     {
+        //essentially i need to only move if the skeleton isnt shooting the bow.
         if (!skeletonArcherAiming.shootBow)
         {
-            if (farAway)
-            {
-                float range = (transform.position - startingPoint).magnitude;
-                ChangeDirection();
-                if (range < 2)
-                {
-                    farAway = false;
-                }
-            }
-            else
-            {
-                if (timer < timeTracker)
-                {
-                    ChangeDirection();
-                    timer = Random.Range(1, timerRange);
-                    timeTracker = 0;
-                }
-                else
-                {
-                    timeTracker += Time.deltaTime;
-                }
-                farAway = moveCon.LineDetection(transform);
-            }
             moveCon.SetIdleStance();
-        }
-    }
-
-    private void FixedUpdate()
-    {
-        if (!skeletonArcherAiming.shootBow&&!combatListener.OnFire&&!combatListener.Frozen)
-        {
-            if (playerInRange.playerInRange)
+            //this checks to see if we are colliding with something 
+            if (!isColliding)
             {
-                if (skeletonArcherAiming.aiming)
+                //this is for when the player is in range
+                //the skeleton gains line of sight with the player and then fires
+                if (farAway)
                 {
-                    skeletonArcherAiming.AlignWithPlayer();
+                    float range = (transform.position - startingPoint).magnitude;
+                    if (range < 2)
+                    {
+                        farAway = false;
+                    }
                 }
-                else
+                else if(!playerInRange.playerInRange&&!farAway)
                 {
-                    moveCon.movementSpeed = 3;
-                    moveCon.Movement = skeletonArcherAiming.DecidedDirection();
+                    if (timer < timeTracker)
+                    {
+                        
+                        ChangeDirection();
+                        timer = Random.Range(1, timerRange);
+                        timeTracker = 0;
+                    }
+                    else
+                    {
+                        timeTracker += Time.deltaTime;
+                    }
+                }else if (playerInRange.playerInRange)
+                {
+                    if (skeletonArcherAiming.aiming)
+                    {
+                        print("Aligning with player");
+                        skeletonArcherAiming.AlignWithPlayer();
+                    }
+                    else
+                    {
+                        moveCon.movementSpeed = 3;
+                        moveCon.Movement = skeletonArcherAiming.DecidedDirection();
+                    }
                 }
-
-
             }
             moveCon.MoveNPC();
-        } else if (combatListener.OnFire)
-        {
-            moveCon.movementSpeed = 5;
-            moveCon.MoveNPC();
-        } else if (moveCon.ifHit)
-        {
-            moveCon.MoveNPC();
         }
     }
+
     public int directionIndex;
     public bool farAway;
     void ChangeDirection()
     {
         float range = (transform.position - startingPoint).magnitude;
-        if (range > 10||farAway)
+        if (range > 10)
         {
             farAway = true;
             moveCon.Movement = startingPoint - transform.position;
@@ -168,7 +159,17 @@ public class SkeletonArcher : MonoBehaviour {
             directionIndex = Random.Range(0, 3);
             moveCon.Movement = direction[directionIndex];
         }
-
+       /* float range = (transform.position - startingPoint).magnitude;
+        if (range > 10||farAway)
+        {
+            farAway = true;
+            moveCon.Movement = startingPoint - transform.position;
+        }
+        else
+        {
+            directionIndex = Random.Range(0, 3);
+            moveCon.Movement = direction[directionIndex];
+        }*/
     }
 
     public void SetShootingFalse()
@@ -181,38 +182,27 @@ public class SkeletonArcher : MonoBehaviour {
         Instantiate(arrow,gameObject.transform);
     }
 
+    private bool isColliding=false;
+    private Vector2 hitPoint;
     private void OnCollisionStay2D(Collision2D collision)
     {
-        foreach (ContactPoint2D contact in collision.contacts)
+        isColliding = true;
+        if (!skeletonArcherAiming.shootBow)
         {
-            float deltaX = contact.point.x - transform.position.x;
-            float deltaY = contact.point.y - transform.position.y;
-            if (Mathf.Abs(deltaX) > Mathf.Abs(deltaY))
+            foreach (ContactPoint2D contact in collision.contacts)
             {
-                if (deltaX > 0)
-                {
-                    moveCon.Movement = Vector3.left;
-                }
-                else
-                {
-                    moveCon.Movement = Vector3.right;
-                }
+                print("movementGiven");
 
-                //left or right
-            }
-            else
-            {
-                if (deltaY > 0)
-                {
-                    moveCon.Movement = Vector3.up;
-                }
-                else
-                {
-                    moveCon.Movement = Vector3.down;
-                }
+                hitPoint = contact.point;
+
+                moveCon.Movement = transform.position-new Vector3(hitPoint.x, hitPoint.y, 0) ;
             }
         }
-        ChangeDirection();
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        isColliding = false;
     }
 }
 
@@ -272,11 +262,11 @@ public class SkeletonArcherAiming {
 
     public void AlignWithPlayer()
     {
-        if (Mathf.Abs(player.transform.position.x - self.transform.position.x) < 0.1f)
+        if (Mathf.Abs(player.transform.position.x - self.transform.position.x) < 0.2f)
         {
             aiming = false;
             if (player.transform.position.y > self.transform.position.y)
-            {
+            {               
                 anim.SetFloat("IdleStance", 3);
             }
             else
@@ -284,7 +274,7 @@ public class SkeletonArcherAiming {
                 anim.SetFloat("IdleStance", 0);
             }
             ShootBowState(true);
-        }else if (Mathf.Abs(player.transform.position.y - self.transform.position.y) < 0.1f)
+        }else if (Mathf.Abs(player.transform.position.y - self.transform.position.y) < 0.2f)
         {
             aiming = false;
             if (player.transform.position.x > self.transform.position.x)

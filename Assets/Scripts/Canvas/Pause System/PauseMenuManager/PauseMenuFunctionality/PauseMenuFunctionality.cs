@@ -164,10 +164,10 @@ public class PauseMenuFunctionality : MonoBehaviour {
         this.enabled = false;
         GetComponent<Animator>().SetTrigger("TurnOff");
         //PlayerMangerListener.instance.IsPaused = false;
-        PlayerMangerListener.instance.StateOf = GameState.StateOfGame.GameListening;
     }
     public void SetDisabled()
     {
+        PlayerMangerListener.instance.StateOf = GameState.StateOfGame.GameListening;
         gameObject.SetActive(false);
         eventSystem.SetSelectedGameObject(null);
     }

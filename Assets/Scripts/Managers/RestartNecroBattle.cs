@@ -44,6 +44,7 @@ public class RestartNecroBattle : MonoBehaviour {
 
     void Restart()
     {
+        MusicManager.instance.AreaTag = "MoutianInterior";
         Destroy(aliveObj);
         GameObject necro = Instantiate(reference,necroBossTransform);
         aliveObj = necro;

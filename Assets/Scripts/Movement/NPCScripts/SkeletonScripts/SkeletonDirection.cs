@@ -123,38 +123,14 @@ public class SkeletonDirection : MonoBehaviour {
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private Vector2 hitPoint;
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        foreach(ContactPoint2D contact in collision.contacts)
+        foreach (ContactPoint2D contact in collision.contacts)
         {
-            float deltaX = contact.point.x - transform.position.x;
-            float deltaY = contact.point.y - transform.position.y;
-            if (Mathf.Abs(deltaX) > Mathf.Abs(deltaY))
-            {
-                if (deltaX > 0)
-                {
-                    moveCon.Movement = Vector3.left;
-                }
-                else
-                {
-                    moveCon.Movement = Vector3.right;
-                }
-
-                //left or right
-            }
-            else
-            {
-                if (deltaY > 0)
-                {
-                    moveCon.Movement = Vector3.up;
-                }
-                else
-                {
-                    moveCon.Movement = Vector3.down;
-                }
-            }
+            hitPoint = contact.point;
+            moveCon.Movement = transform.position - new Vector3(hitPoint.x, hitPoint.y, 0);
         }
-        ChangeDirection();
     }
 }
 
